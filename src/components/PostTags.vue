@@ -15,7 +15,12 @@
 </template>
 
 <script>
-  export default {
-    props: ['post'],
+export default {
+  props: {
+    post: {
+      type: Array,
+      default: null
+    }
   }
+};
 </script>

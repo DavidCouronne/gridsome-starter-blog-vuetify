@@ -2,102 +2,100 @@
   <Layout>
     <v-container>
       <v-card max-width="800" class="mx-auto">
-    <div class="post-title">
-      <h1 class="post-title__text">
-        {{ $page.post.title }}
-      </h1>
-      <s-e-o />
+        <div class="post-title">
+          <h1 class="post-title__text">
+            {{ $page.post.title }}
+          </h1>
+          <s-e-o />
 
-      <post-meta :post="$page.post" />
-    </div>
+          <post-meta :post="$page.post" />
+        </div>
 
-    <div class="post content-box">
-      <div class="post__header">
-        
-        <v-img
-        v-if="$page.post.cover_image"
-        alt="Cover image"
-        :aspect-ratio="16/9"
-        :src="$page.post.cover_image"
-      />
-      </div>
+        <div class="post content-box">
+          <div class="post__header">
+            <v-img
+              v-if="$page.post.cover_image"
+              alt="Cover image"
+              :aspect-ratio="16 / 9"
+              :src="$page.post.cover_image"
+            />
+          </div>
 
-      <div
-        class="post__content"
-        v-html="$page.post.content"
-      />
+          <div class="post__content" v-html="$page.post.content" />
 
-      <div class="post__footer">
-        <post-tags :post="$page.post" />
-      </div>
-    </div>
+          <div class="post__footer">
+            <post-tags :post="$page.post" />
+          </div>
+        </div>
 
-    <div class="post-comments">
-      <!-- Add comment widgets here -->
-    </div>
+        <div class="post-comments">
+          <!-- Add comment widgets here -->
+        </div>
 
-    <!-- <Author class="post-author" /> -->
-    </v-card>
+        <!-- <Author class="post-author" /> -->
+      </v-card>
     </v-container>
   </Layout>
 </template>
 
 <script>
-  import PostMeta from '~/components/PostMeta'
-  import PostTags from '~/components/PostTags'
-  // import Author from '~/components/Author.vue'
-  import SEO from '~/components/base/SEO.vue'
+import PostMeta from "~/components/PostMeta";
+import PostTags from "~/components/PostTags";
+// import Author from '~/components/Author.vue'
+import SEO from "~/components/base/SEO.vue";
 
-  export default {
-    components: {
-      // Author,
-      PostMeta,
-      PostTags,
-      SEO,
-    },
+export default {
+  components: {
+    // Author,
+    PostMeta,
+    PostTags,
+    SEO
+  },
 
-    metaInfo () {
-      return {
-
-        title: `${this.$page.post.title} ${this.$page.post.tag ? '- ' + this.$page.post.tag.name : ''}`,
-
-      }
-    },
-    computed: {
-
-      /* avatar () {
+  metaInfo() {
+    return {
+      title: `${this.$page.post.title} ${
+        this.$page.post.tag ? "- " + this.$page.post.tag.name : ""
+      }`
+    };
+  },
+  computed: {
+    /* avatar () {
       return `/images/authors/${this.$page.post.author.id}.png`
     }, */
-      /* postIsOlderThanOneYear () {
+    /* postIsOlderThanOneYear () {
       let postDate = moment(this.$page.post.datetime)
       return moment().diff(postDate, 'years') > 0 ? true : false
     }, */
 
-      ogImageUrl () {
-        return this.$page.post.cover_image
-      },
+    ogImageUrl() {
+      return this.$page.post.cover_image;
+    }
+  },
+  methods: {
+    imageLoadError(e) {
+      e.target.src = `/images/authors/default.png`;
     },
-    methods: {
-      imageLoadError (e) {
-        e.target.src = `/images/authors/default.png`
-      },
-      description (post, length, clamp) {
-        if (post.description) {
-          return post.description
-        }
-        length = length || 280
-        clamp = clamp || ' ...'
-        let text = post.content.replace(/<pre(.|\n)*?<\/pre>/gm, '').replace(/<[^>]+>/gm, '')
-        return text.length > length ? `${text.slice(0, length)}${clamp}` : text
-      },
-      titleCase (str) {
-        return str.replace('-', ' ')
-          .split(' ')
-          .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-          .join(' ')
-      },
+    description(post, length, clamp) {
+      if (post.description) {
+        return post.description;
+      }
+      length = length || 280;
+      clamp = clamp || " ...";
+      let text = post.content
+        .replace(/<pre(.|\n)*?<\/pre>/gm, "")
+        .replace(/<[^>]+>/gm, "");
+      return text.length > length ? `${text.slice(0, length)}${clamp}` : text;
     },
+    titleCase(str) {
+      return str
+        .replace("-", " ")
+        .split(" ")
+        .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+        .join(" ");
+    }
   }
+};
 </script>
 
 <static-query>

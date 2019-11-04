@@ -9,15 +9,13 @@
       blur="5"
     />
 
-    <h1
-      v-if="showTitle"
-      class="author__site-title"
-    >
+    <h1 v-if="showTitle" class="author__site-title">
       {{ $static.metadata.siteName }}
     </h1>
 
     <p class="author__intro">
-      A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
+      A simple, hackable & minimalistic starter for Gridsome that uses Markdown
+      for content.
     </p>
 
     <p class="author__links">
@@ -36,7 +34,7 @@ query {
 </static-query>
 
 <script>
-  export default {
-    props: ['showTitle'],
-  }
+export default {
+  props: ["showTitle"]
+};
 </script>

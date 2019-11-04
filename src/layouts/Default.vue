@@ -2,12 +2,7 @@
   <v-app>
     <div>
       <v-app-bar app hide-on-scroll>
-        <v-btn
-          icon
-          router
-          exact
-          :to="$url('/')"
-        >
+        <v-btn icon router exact :to="$url('/')">
           <v-icon>mdi-home</v-icon>
         </v-btn>
         <v-toolbar-title>
