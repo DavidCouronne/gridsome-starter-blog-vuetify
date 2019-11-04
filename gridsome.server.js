@@ -19,8 +19,8 @@ module.exports = function(api) {
         })
       ]);
     }
-    config
-      .plugin("BundleAnalyzerPlugin")
-      .use(BundleAnalyzerPlugin, [{ analyzerMode: "static" }]);
+    // config
+    //   .plugin("BundleAnalyzerPlugin")
+    //   .use(BundleAnalyzerPlugin, [{ analyzerMode: "static" }]);
   });
 };
