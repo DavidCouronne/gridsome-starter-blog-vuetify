@@ -1,23 +1,12 @@
 <template>
   <v-col cols="12">
-    <v-card
-      max-width="800"
-
-      class="mx-auto"
-    >
+    <v-card max-width="800" class="mx-auto">
       <v-list-item>
         <v-list-item-avatar color="grey" />
         <v-list-item-content>
-          <v-list-item-title class="headline">
-            {{ post.title }}
-          </v-list-item-title>
-          <post-meta
-
-            :post="post"
-          />
-          <v-list-item-subtitle v-if="post.author">
-            by {{ post.author }}
-          </v-list-item-subtitle>
+          <v-list-item-title class="headline">{{ post.title }}</v-list-item-title>
+          <post-meta :post="post" />
+          <v-list-item-subtitle v-if="post.author">by {{ post.author }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -28,36 +17,26 @@
         :src="post.cover_image"
       />
 
-      <v-card-text>
-        {{ post.description }}
-      </v-card-text>
+      <v-card-text>{{ post.description }}</v-card-text>
       <v-divider />
       <v-card-actions>
-        <post-tags
-
-          :post="post"
-        />
+        <post-tags :post="post" />
         <v-spacer />
-        <v-btn
-
-          :to="$url(post.path)"
-        >
-          Read
-        </v-btn>
+        <v-btn color="primary" dark :to="$url(post.path)">Read</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>
 </template>
 
 <script>
-  import PostMeta from '~/components/PostMeta'
-  import PostTags from '~/components/PostTags'
+import PostMeta from "~/components/PostMeta";
+import PostTags from "~/components/PostTags";
 
-  export default {
-    components: {
-      PostMeta,
-      PostTags,
-    },
-    props: ['post'],
-  }
+export default {
+  components: {
+    PostMeta,
+    PostTags
+  },
+  props: ["post"]
+};
 </script>

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar>
+      <v-app-bar app hide-on-scroll>
         <v-btn
           icon
           router
@@ -14,7 +14,6 @@
           {{ $static.metadata.siteName }}
         </v-toolbar-title>
         <v-spacer />
-
         <v-btn :to="$url('/')">
           Home
         </v-btn>
