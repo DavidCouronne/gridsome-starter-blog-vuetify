@@ -35,7 +35,7 @@
       <v-card-actions>
         <post-tags :post="post" />
         <v-spacer />
-        <v-btn color="success" router dark :to="$url(post.path)">
+        <v-btn color="primary" router dark :to="$url(post.path)">
           Read
         </v-btn>
       </v-card-actions>
