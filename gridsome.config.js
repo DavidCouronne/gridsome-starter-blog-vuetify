@@ -6,6 +6,13 @@
 
 module.exports = {
   siteName: 'Gridsome',
+  siteDescription: 'A sample site for Gridsome plugins',
+  siteUrl: 'https://gridsome-plugin-demo.netlify.com',
+
+  templates: {
+    Post: '/:title',
+    Tag: '/tag/:id',
+  },
   plugins: [
     {
       // Create posts from markdown files
