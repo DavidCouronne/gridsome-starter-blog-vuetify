@@ -5,17 +5,14 @@ import Vuetify from "vuetify";
 import "./assets/style/index.scss";
 
 import DefaultLayout from "~/layouts/Default.vue";
+import { vuetifyConfig } from "./vuetify.config.js";
 
 export default function(Vue, { appOptions }) {
   // Set default layout as a global component
+  const vuetifyOpts = vuetifyConfig();
 
-  const opts = {
-    icons: {
-      iconfont: "mdi"
-    }
-  }; // opts includes, vuetify themes, icons, etc.
   Vue.use(Vuetify);
 
-  appOptions.vuetify = new Vuetify(opts);
+  appOptions.vuetify = new Vuetify(vuetifyOpts);
   Vue.component("Layout", DefaultLayout);
 }
