@@ -1,5 +1,7 @@
 <template>
   <Layout>
+    <v-container>
+      <v-card max-width="800" class="mx-auto">
     <div class="post-title">
       <h1 class="post-title__text">
         {{ $page.post.title }}
@@ -11,12 +13,13 @@
 
     <div class="post content-box">
       <div class="post__header">
-        <g-image
-          v-if="$page.post.cover_image"
-          class="cover-image"
-          alt="Cover image"
-          :src="$page.post.cover_image"
-        />
+        
+        <v-img
+        v-if="$page.post.cover_image"
+        alt="Cover image"
+        :aspect-ratio="16/9"
+        :src="$page.post.cover_image"
+      />
       </div>
 
       <div
@@ -34,6 +37,8 @@
     </div>
 
     <!-- <Author class="post-author" /> -->
+    </v-card>
+    </v-container>
   </Layout>
 </template>
 
