@@ -1,45 +1,33 @@
 <template>
-  <Layout>
-    <v-container>
-      <v-card pa-6 max-width="800" class="mx-auto">
-        <div class="post-title">
-          <h1 class="post-title__text">
-            {{ $page.post.title }}
-          </h1>
-          <s-e-o />
+  <BlogLayout :post="$page.post">
+    <s-e-o />
 
-          <post-meta :post="$page.post" />
-        </div>
+    <div class="post content-box">
+      <div class="post__header">
+        <v-img
+          v-if="$page.post.cover_image"
+          alt="Cover image"
+          :aspect-ratio="16 / 9"
+          :src="$page.post.cover_image"
+        />
+      </div>
 
-        <div class="post content-box">
-          <div class="post__header">
-            <v-img
-              v-if="$page.post.cover_image"
-              alt="Cover image"
-              :aspect-ratio="16 / 9"
-              :src="$page.post.cover_image"
-            />
-          </div>
+      <div class="post__content" v-html="$page.post.content" />
 
-          <div class="post__content" v-html="$page.post.content" />
+      <div class="post__footer">
+        <post-tags :post="$page.post" />
+      </div>
+    </div>
 
-          <div class="post__footer">
-            <post-tags :post="$page.post" />
-          </div>
-        </div>
+    <div class="post-comments">
+      <!-- Add comment widgets here -->
+    </div>
 
-        <div class="post-comments">
-          <!-- Add comment widgets here -->
-        </div>
-
-        <!-- <Author class="post-author" /> -->
-      </v-card>
-    </v-container>
-  </Layout>
+    <!-- <Author class="post-author" /> -->
+  </BlogLayout>
 </template>
 
 <script>
-import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
 // import Author from '~/components/Author.vue'
 import SEO from "~/components/base/SEO.vue";
@@ -47,7 +35,7 @@ import SEO from "~/components/base/SEO.vue";
 export default {
   components: {
     // Author,
-    PostMeta,
+
     PostTags,
     SEO
   },

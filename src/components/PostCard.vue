@@ -14,7 +14,7 @@
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title class="headline">
-            {{ post.title }}
+            <g-link :to="$url(post.path)">{{ post.title }}</g-link>
           </v-list-item-title>
           <post-meta :post="post" />
           <v-list-item-subtitle v-if="post.author">

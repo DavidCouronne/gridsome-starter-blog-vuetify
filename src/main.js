@@ -6,6 +6,7 @@ import "./assets/style/index.scss";
 
 import DefaultLayout from "~/layouts/Default.vue";
 import HeroLayout from "~/layouts/Hero.vue";
+import BlogLayout from "~/layouts/Blog.vue";
 import { vuetifyConfig } from "./vuetify.config.js";
 
 export default function(Vue, { appOptions }) {
@@ -17,4 +18,5 @@ export default function(Vue, { appOptions }) {
   appOptions.vuetify = new Vuetify(vuetifyOpts);
   Vue.component("Layout", DefaultLayout);
   Vue.component("HeroLayout", HeroLayout);
+  Vue.component("BlogLayout", BlogLayout);
 }
