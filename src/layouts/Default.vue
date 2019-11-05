@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar app >
+      <v-app-bar app>
         <v-btn color="accent" icon router exact :to="$url('/')">
           <v-icon>mdi-home-city-outline</v-icon>
         </v-btn>

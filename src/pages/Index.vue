@@ -1,5 +1,5 @@
 <template>
-  <Layout :show-logo="false">
+  <HeroLayout>
     <v-container>
       <div class="posts">
         <v-row dense>
@@ -11,7 +11,7 @@
         </v-row>
       </div>
     </v-container>
-  </Layout>
+  </HeroLayout>
 </template>
 
 <page-query>

@@ -1,8 +1,7 @@
 <template>
   <Layout>
     <v-container>
-      <v-card  pa-6
-       max-width="800" class="mx-auto">
+      <v-card pa-6 max-width="800" class="mx-auto">
         <div class="post-title">
           <h1 class="post-title__text">
             {{ $page.post.title }}
