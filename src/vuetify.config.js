@@ -1,9 +1,9 @@
 export function vuetifyConfig() {
   return {
     rtl: false,
-    icons: {
-      iconfont: "mdi"
-    },
+    // icons: {
+    //   iconfont: "mdi"
+    // },
     theme: {
       dark: true,
       themes: {
