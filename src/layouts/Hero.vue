@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="setTheme">
+  <v-app :dark="darkTheme">
     <v-card>
       <v-app-bar
         app
@@ -18,8 +18,8 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn icon @click="goDark = !goDark">
-          <v-icon v-if="goDark">
+        <v-btn icon @click="switchTheme()">
+          <v-icon v-if="darkTheme">
             mdi-white-balance-sunny
           </v-icon>
           <v-icon v-else>
@@ -61,22 +61,38 @@
 </static-query>
 
 <script>
+import ThemeSwitcher from "./partials/ThemeSwitcher";
 export default {
+  components: {
+    ThemeSwitcher
+  },
   data() {
     return {
-      goDark: false
+      darkTheme: false,
+      theme: '',
     };
   },
-  computed: {
-    setTheme() {
-      if (this.goDark == true) {
+  mounted() {
+    this.theme = localStorage.getItem('theme') || 'theme-light'
+    this.darkTheme = this.theme === "theme-dark" ? true : false
+  },
+  methods: {
+    toggle() {
+      this.isOpen = !this.isOpen;
+    },
+    switchTheme() {
+      
+      const newTheme =
+        this.theme === "theme-light" ? "theme-dark" : "theme-light";
+      localStorage.setItem("theme", newTheme);
+      this.theme = newTheme
+      this.darkTheme = !this.darkTheme
+      
+      if (this.theme == "theme-dark") {
         return (this.$vuetify.theme.dark = true);
       } else {
         return (this.$vuetify.theme.dark = false);
       }
-    },
-    setGoDark() {
-      return this.goDark === !this.goDark;
     }
   }
 };
