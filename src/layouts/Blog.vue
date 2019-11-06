@@ -9,7 +9,7 @@
       fade-img-on-scroll
       :src="post.cover_image"
     >
-      <v-btn dark icon router exact to="/" >
+      <v-btn dark icon router exact to="/">
         <v-icon>mdi-home</v-icon>
       </v-btn>
 
@@ -19,7 +19,7 @@
 
       <v-toolbar-title>Posted {{ post.date }}. </v-toolbar-title>
 
-      <v-btn icon @click="goDark = !goDark" >
+      <v-btn icon @click="goDark = !goDark">
         <v-icon v-if="goDark">mdi-white-balance-sunny</v-icon>
         <v-icon v-else>mdi-moon-waxing-crescent</v-icon>
       </v-btn>

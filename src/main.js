@@ -9,7 +9,12 @@ import HeroLayout from "~/layouts/Hero.vue";
 import BlogLayout from "~/layouts/Blog.vue";
 import { vuetifyConfig } from "./vuetify.config.js";
 
-export default function(Vue, { appOptions }) {
+export default function(Vue, { head, appOptions }) {
+
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+  })
   // Set default layout as a global component
   const vuetifyOpts = vuetifyConfig();
 

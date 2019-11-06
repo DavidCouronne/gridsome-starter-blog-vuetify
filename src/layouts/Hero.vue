@@ -19,7 +19,7 @@
         <v-spacer></v-spacer>
 
         <v-btn icon @click="goDark = !goDark">
-          <v-icon v-if="goDark" >
+          <v-icon v-if="goDark">
             mdi-white-balance-sunny
           </v-icon>
           <v-icon v-else>
