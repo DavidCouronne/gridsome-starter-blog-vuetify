@@ -61,33 +61,28 @@
 </static-query>
 
 <script>
-import ThemeSwitcher from "./partials/ThemeSwitcher";
 export default {
-  components: {
-    ThemeSwitcher
-  },
   data() {
     return {
       darkTheme: false,
-      theme: '',
+      theme: ""
     };
   },
   mounted() {
-    this.theme = localStorage.getItem('theme') || 'theme-light'
-    this.darkTheme = this.theme === "theme-dark" ? true : false
+    this.theme = localStorage.getItem("theme") || "theme-light";
+    this.darkTheme = this.theme === "theme-dark" ? true : false;
   },
   methods: {
     toggle() {
       this.isOpen = !this.isOpen;
     },
     switchTheme() {
-      
       const newTheme =
         this.theme === "theme-light" ? "theme-dark" : "theme-light";
       localStorage.setItem("theme", newTheme);
-      this.theme = newTheme
-      this.darkTheme = !this.darkTheme
-      
+      this.theme = newTheme;
+      this.darkTheme = !this.darkTheme;
+
       if (this.theme == "theme-dark") {
         return (this.$vuetify.theme.dark = true);
       } else {
