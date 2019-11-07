@@ -12,9 +12,9 @@
           />
         </v-list-item-avatar>
         <v-list-item-content>
-          <v-list-item-title class="headline">
-            <g-link :to="$url(post.path)">{{ post.title }}</g-link>
-          </v-list-item-title>
+          <h2 class="headline"><g-link :to="$url(post.path)">{{ post.title }}</g-link>
+            
+          </h2>
           <post-meta :post="post" />
           <v-list-item-subtitle v-if="post.author"
             >by {{ post.author }}</v-list-item-subtitle

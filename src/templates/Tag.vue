@@ -1,5 +1,6 @@
 <template>
-  <Layout>
+  <TagLayout >
+    <s-e-o />
     <h1 class="tag-title text-center space-bottom"># {{ $page.tag.title }}</h1>
 
     <div class="posts">
@@ -9,7 +10,7 @@
         :post="edge.node"
       />
     </div>
-  </Layout>
+  </TagLayout>
 </template>
 
 <page-query>
@@ -26,6 +27,7 @@ query Tag ($id: ID!) {
             timeToRead
             description
             content
+            avatar
           }
         }
       }

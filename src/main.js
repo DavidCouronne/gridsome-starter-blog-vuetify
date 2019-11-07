@@ -7,6 +7,8 @@ import './assets/style/primjs-languages.js'
 
 import HeroLayout from '~/layouts/Hero.vue'
 import BlogLayout from '~/layouts/Blog.vue'
+import TagLayout from '~/layouts/Tag.vue'
+
 import { vuetifyConfig } from './vuetify.config.js'
 
 export default function(Vue, { head, appOptions }) {
@@ -23,4 +25,5 @@ export default function(Vue, { head, appOptions }) {
   // Set layout as a global component
   Vue.component('HeroLayout', HeroLayout)
   Vue.component('BlogLayout', BlogLayout)
+  Vue.component('TagLayout', TagLayout)
 }

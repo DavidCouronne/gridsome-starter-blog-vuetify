@@ -1,14 +1,6 @@
 <template>
   <v-app :dark="darkTheme">
-    <v-app-bar
-      app
-      dark
-      shrink-on-scroll
-      prominent
-      elevate-on-scroll
-      fade-img-on-scroll
-      :src="post.cover_image"
-    >
+    <v-app-bar app dark elevate-on-scroll>
       <v-btn dark icon router exact :to="$url('/')" title="Home">
         <v-icon>mdi-home</v-icon>
       </v-btn>
