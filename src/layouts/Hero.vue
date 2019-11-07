@@ -10,22 +10,19 @@
         fade-img-on-scroll
         src="https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
       >
-        <v-btn dark icon router exact to="/">
+        <v-btn dark icon router exact :to="$url('/')" title="Home">
           <v-icon>mdi-home</v-icon>
         </v-btn>
 
         <v-toolbar-title>My Blog</v-toolbar-title>
 
         <v-spacer></v-spacer>
-
-        <v-btn icon @click="switchTheme()">
-          <v-icon v-if="darkTheme">
-            mdi-white-balance-sunny
-          </v-icon>
-          <v-icon v-else>
-            mdi-moon-waxing-crescent
-          </v-icon>
+        <!-- Theme Switcher -->
+        <v-btn icon @click="switchTheme()" title="Switch Theme">
+          <v-icon v-if="darkTheme">mdi-white-balance-sunny</v-icon>
+          <v-icon v-else>mdi-moon-waxing-crescent</v-icon>
         </v-btn>
+        <!-- Theme Switcher -->
       </v-app-bar>
 
       <v-card class="mx-auto my-4" max-width="800" flat>

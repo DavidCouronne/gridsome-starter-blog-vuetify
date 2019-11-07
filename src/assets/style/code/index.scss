@@ -1,37 +1,36 @@
 @import './tomorrow.scss';
-//@import '~prismjs/themes/prism-tomorrow.css';
-@import "./prism-line-number.scss";
+@import './prism-line-number.scss';
 
 //plugin gridsome-prism-all
 
-@import "./code-title";
+@import './code-title';
 
- .gridsome-highlight {
-   background-color: #2d2d2d;
-   border-radius: 0.3em;
-   margin: 0.5em 0;
-   padding: 1em;
-   overflow: auto;
- }
+.gridsome-highlight {
+  background-color: #2d2d2d;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
 
- .gridsome-highlight pre[class*="language-"] {
-   background-color: transparent;
-   margin: 0;
-   padding: 0;
-   padding-top: 0;
-   padding-bottom: 0;
-   overflow: initial;
-   float: left; /* 1 */
-   min-width: 100%; /* 2 */
- }
+.gridsome-highlight pre[class*='language-'] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
 
-.gridsome-highlight pre[class*="language-"].line-numbers {
-   position: relative;
+.gridsome-highlight pre[class*='language-'].line-numbers {
+  position: relative;
   padding-left: 3.8em;
   counter-reset: linenumber;
 }
 
-@import "./code-line";
+@import './code-line';
 
 // End plugin gridsome
 
@@ -56,25 +55,3 @@
 
   box-sizing: initial; // Reset vuetify - empeche la barre de scroll !
 }
-
-// Scroll - non fonctionnel
-/* 
-pre[class*="language-"] {
-  padding: 2em 1em;
-  margin-bottom: 1.5rem;
-  overflow: auto;
-  border-radius: 0.3em;
-  &::-webkit-scrollbar-thumb {
-    background: #3498db;
-  }
-  &::-webkit-scrollbar-track {
-    background: #4b4e57;
-  }
-  &::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-  }
-}
- */
-//End scroll
- 

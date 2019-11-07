@@ -3,10 +3,8 @@
 
 import Vuetify from 'vuetify'
 import './assets/style/index.scss'
-//import 'prismjs/themes/prism-tomorrow.css';
-import './assets/style/prism'
+import './assets/style/primjs-languages.js'
 
-import DefaultLayout from '~/layouts/Default.vue'
 import HeroLayout from '~/layouts/Hero.vue'
 import BlogLayout from '~/layouts/Blog.vue'
 import { vuetifyConfig } from './vuetify.config.js'
@@ -16,13 +14,13 @@ export default function(Vue, { head, appOptions }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
   })
-  // Set default layout as a global component
+
   const vuetifyOpts = vuetifyConfig()
 
   Vue.use(Vuetify)
 
   appOptions.vuetify = new Vuetify(vuetifyOpts)
-  Vue.component('Layout', DefaultLayout)
+  // Set layout as a global component
   Vue.component('HeroLayout', HeroLayout)
   Vue.component('BlogLayout', BlogLayout)
 }

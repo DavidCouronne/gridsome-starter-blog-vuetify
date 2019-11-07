@@ -3,14 +3,22 @@
     <v-card max-width="800" class="mx-auto">
       <v-list-item>
         <v-list-item-avatar v-if="post.avatar" color="grey">
-          <g-image :src="post.avatar" width="180" height="180" blur="5" alt="avatar" />
+          <g-image
+            :src="post.avatar"
+            width="180"
+            height="180"
+            blur="5"
+            alt="avatar"
+          />
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title class="headline">
             <g-link :to="$url(post.path)">{{ post.title }}</g-link>
           </v-list-item-title>
           <post-meta :post="post" />
-          <v-list-item-subtitle v-if="post.author">by {{ post.author }}</v-list-item-subtitle>
+          <v-list-item-subtitle v-if="post.author"
+            >by {{ post.author }}</v-list-item-subtitle
+          >
         </v-list-item-content>
       </v-list-item>
 

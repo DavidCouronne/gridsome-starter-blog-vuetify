@@ -2,7 +2,7 @@
   <v-app>
     <div>
       <v-app-bar app>
-        <v-btn color="accent" icon router exact :to="$url('/')">
+        <v-btn color="accent" icon router exact :to="$url('/')" title="Home">
           <v-icon>mdi-home-city-outline</v-icon>
         </v-btn>
         <v-toolbar-title>{{ $static.metadata.siteName }}</v-toolbar-title>
