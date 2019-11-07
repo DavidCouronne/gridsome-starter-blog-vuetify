@@ -7,6 +7,8 @@
 
  A Basic Gridsome Blog starter with Vuetify 2.x
 
+ [**Demo Website**](https://gridsome-vuetify-blog-starter.netlify.com/)
+
 
 ## Features
 
@@ -16,9 +18,9 @@
 + Eslint and Prettier
 + SEO friendly
 
-## Demo URL
+## 🚀 Getting Started
 
-https://gridsome-vuetify-blog-starter.netlify.com/
+
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/DavidCouronne/gridsome-starter-blog-vuetify)
 
@@ -26,7 +28,7 @@ https://gridsome-vuetify-blog-starter.netlify.com/
 
 ## Install
 
-1. `gridsome create my-gridsome-site `
+1. `gridsome create my-gridsome-site https://github.com/DavidCouronne/gridsome-starter-blog-vuetify`
 2. `cd my-gridsome-site` to open folder
 3. `gridsome develop` to start local dev server at http://localhost:8080
 
