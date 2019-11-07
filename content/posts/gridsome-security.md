@@ -7,6 +7,7 @@ tags: ['Gridsome', 'SEO']
 canonical_url: false
 description: "Improve security headers and SEO with vue-meta"
 cover_image: https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1572590743/bernard-hermant-IhcSHrZXFs4-unsplash.jpg
+avatar: "davidcouronne.jpg"
 ---
 
 ## Improve security with Netlify

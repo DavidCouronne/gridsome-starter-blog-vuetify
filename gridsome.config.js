@@ -61,7 +61,7 @@ module.exports = {
                 language: 'toml',
                 extend: 'yaml',
                 definition: {
-                  vue_types: /(Toml)/
+                  toml_types: /(Toml)/
                 },
                 insertBefore: {
                   function: {

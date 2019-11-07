@@ -25,6 +25,7 @@ query {
         timeToRead
         description
         cover_image
+        avatar
         path
         author
         tags {

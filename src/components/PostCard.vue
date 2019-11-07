@@ -2,24 +2,15 @@
   <v-col cols="12">
     <v-card max-width="800" class="mx-auto">
       <v-list-item>
-        <v-list-item-avatar color="grey">
-          <g-image
-            alt="Author image"
-            class="author__image"
-            src="~/assets/images/author.jpg"
-            width="180"
-            height="180"
-            blur="5"
-          />
+        <v-list-item-avatar v-if="post.avatar" color="grey">
+          <g-image :src="post.avatar" width="180" height="180" blur="5" alt="avatar" />
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title class="headline">
             <g-link :to="$url(post.path)">{{ post.title }}</g-link>
           </v-list-item-title>
           <post-meta :post="post" />
-          <v-list-item-subtitle v-if="post.author">
-            by {{ post.author }}
-          </v-list-item-subtitle>
+          <v-list-item-subtitle v-if="post.author">by {{ post.author }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -35,9 +26,7 @@
       <v-card-actions>
         <post-tags :post="post" />
         <v-spacer />
-        <v-btn color="primary" router dark :to="$url(post.path)">
-          Read
-        </v-btn>
+        <v-btn color="primary" router dark :to="$url(post.path)">Read</v-btn>
       </v-card-actions>
     </v-card>
   </v-col>
