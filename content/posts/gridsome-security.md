@@ -15,11 +15,11 @@ You can visite and scanne your website at https://securityheaders.com .
 
 If security headers are missing then you will get D Grade even on Netlify.
 
-![Security Report Before](./SecurityReportSummary-before.jpg)
+
 
 You can Get A grade by just adding few lines of code.
 
-![Security Report After](./SecurityReportSummary-after.jpg)
+
 
 In your root directory, create a file `netlify.toml`
 

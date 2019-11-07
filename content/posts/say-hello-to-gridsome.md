@@ -16,20 +16,8 @@ With **Gridsome** you get a **universal GraphQL layer** for all your connected d
 
 Here is an example on how to query posts from the GraphQL layer in a page:
 
-```html{3,5-7}{numberLines: 21}{codeTitle: "In src/pages/Index.vue"}
-<template>
-  <Layout>
-    <h2>Latest blog posts</h2>
-    <ul>
-      <li v-for="edge in $page.allWordPressPost.edges" :key="edge.node.id">
-        {{ edge.node.title }}
-      </li>
-    </ul>
-  </Layout>
-</template>
-```
 
-```html{3-5}
+```vue{12-23}{numberLines: true}{codeTitle: "In src/pages/Index.vue"}
 <template>
   <Layout>
     <h2>Latest blog posts</h2>
@@ -61,9 +49,7 @@ You don't need to know GraphQL or Vue to get started with Gridsome - It's a grea
 The GraphQL layer and all the data can be explored in a local GraphQL playground. The playground is usually located at `https://localhost:8080/___explore` when a Gridsome development project is running.
 
 
-```html{codeTitle: "test"}
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">YOUR_CONTENT_HERE</code></pre></di
-```
+
 
 
 

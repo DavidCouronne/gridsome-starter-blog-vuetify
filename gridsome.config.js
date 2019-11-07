@@ -36,7 +36,43 @@ module.exports = {
       externalLinksTarget: "_blank",
       externalLinksRel: ["nofollow", "noopener", "noreferrer"],
       anchorClassName: "icon icon-link",
-      plugins: ["gridsome-plugin-remark-prismjs-all"]
+      plugins: [
+        [
+          "gridsome-plugin-remark-prismjs-all",
+          {
+            aliases: {
+              js: "javascript",
+              sh: "bash"
+            },
+            languageExtensions: [
+              {
+                language: "vue",
+                extend: "html",
+                definition: {
+                  vue_types: /(Vue)/
+                },
+                insertBefore: {
+                  function: {
+                    vue_keywords: /(v-if|v-for)/
+                  }
+                }
+              },
+              {
+                language: "toml",
+                extend: "yaml",
+                definition: {
+                  vue_types: /(Toml)/
+                },
+                insertBefore: {
+                  function: {
+                    toml_keywords: /(build|header)/
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      ]
     }
   }
 };

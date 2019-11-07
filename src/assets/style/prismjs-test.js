@@ -1,3 +1,5 @@
+import { injectGlobal } from "vue-styled-components";
+
 const theme = {
   colors: {
     primary: {
@@ -14,6 +16,7 @@ const COLORS = {
 };
 
 const lables = [
+  { lang: "html", tag: "html", bg: "#61dafb" },
   { lang: "javascript", tag: "js", bg: "#f7df1e" },
   { lang: "typescript", tag: "ts", bg: "#007ACC", color: "#fff" },
   { lang: "css", tag: "css", bg: "#ff9800" },
@@ -30,7 +33,7 @@ const lables = [
 const lablesStyles = lables
   .map(
     ({ lang, tag, bg = COLORS.white, color = COLORS.black }) =>
-      `.lekoarts-highlight[data-language="${lang}"]::before {
+      `.gridsome-highlight[data-language="${lang}"]::before {
       content: '${tag}';
       ${bg && `background: ${bg};`}
       ${color && `color: ${color};`}
@@ -38,7 +41,7 @@ const lablesStyles = lables
   )
   .join(`\n`);
 
-const prism = css`
+injectGlobal`
   p > code,
   li > code {
     color: ${COLORS.white};
@@ -166,12 +169,12 @@ const prism = css`
     cursor: help;
   }
 
-  .lekoarts-highlight {
+  .gridsome-highlight {
     position: relative;
     overflow: auto;
   }
 
-  .lekoarts-highlight[data-language]::before {
+  .gridsome-highlight[data-language]::before {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -186,5 +189,3 @@ const prism = css`
 
   ${lablesStyles}
 `;
-
-export default prism;
