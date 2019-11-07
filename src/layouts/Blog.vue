@@ -51,19 +51,19 @@ export default {
   data() {
     return {
       goDark: false
-    };
+    }
   },
   computed: {
     setTheme() {
       if (this.goDark == true) {
-        return (this.$vuetify.theme.dark = true);
+        return (this.$vuetify.theme.dark = true)
       } else {
-        return (this.$vuetify.theme.dark = false);
+        return (this.$vuetify.theme.dark = false)
       }
     },
     setGoDark() {
-      return this.goDark === !this.goDark;
+      return this.goDark === !this.goDark
     }
   }
-};
+}
 </script>

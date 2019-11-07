@@ -5,25 +5,25 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "Gridsome",
-  siteDescription: "A sample site for Gridsome plugins",
-  siteUrl: "https://gridsome-plugin-demo.netlify.com",
+  siteName: 'Gridsome',
+  siteDescription: 'A sample site for Gridsome plugins',
+  siteUrl: 'https://gridsome-plugin-demo.netlify.com',
 
   templates: {
-    Post: "/:title",
-    Tag: "/tag/:id"
+    Post: '/:title',
+    Tag: '/tag/:id'
   },
   plugins: [
     {
       // Create posts from markdown files
-      use: "@gridsome/source-filesystem",
+      use: '@gridsome/source-filesystem',
       options: {
-        typeName: "Post",
-        path: "content/posts/*.md",
+        typeName: 'Post',
+        path: 'content/posts/*.md',
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
-            typeName: "Tag",
+            typeName: 'Tag',
             create: true
           }
         }
@@ -33,21 +33,21 @@ module.exports = {
   transformers: {
     // Add markdown support to all file-system sources
     remark: {
-      externalLinksTarget: "_blank",
-      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
-      anchorClassName: "icon icon-link",
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
       plugins: [
         [
-          "gridsome-plugin-remark-prismjs-all",
+          'gridsome-plugin-remark-prismjs-all',
           {
             aliases: {
-              js: "javascript",
-              sh: "bash"
+              js: 'javascript',
+              sh: 'bash'
             },
             languageExtensions: [
               {
-                language: "vue",
-                extend: "html",
+                language: 'vue',
+                extend: 'html',
                 definition: {
                   vue_types: /(Vue)/
                 },
@@ -58,8 +58,8 @@ module.exports = {
                 }
               },
               {
-                language: "toml",
-                extend: "yaml",
+                language: 'toml',
+                extend: 'yaml',
                 definition: {
                   vue_types: /(Toml)/
                 },
@@ -75,4 +75,4 @@ module.exports = {
       ]
     }
   }
-};
+}

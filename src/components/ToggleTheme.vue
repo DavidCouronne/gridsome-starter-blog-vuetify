@@ -51,20 +51,20 @@ export default {
   data() {
     return {
       darkTheme: false
-    };
+    }
   },
   mounted() {
-    if (window.__theme === "dark") this.darkTheme = true;
+    if (window.__theme === 'dark') this.darkTheme = true
   },
   methods: {
     toggleTheme() {
-      this.darkTheme = !this.darkTheme;
+      this.darkTheme = !this.darkTheme
 
       // This is using a script that is added in index.html
-      window.__setPreferredTheme(this.darkTheme ? "dark" : "light");
+      window.__setPreferredTheme(this.darkTheme ? 'dark' : 'light')
     }
   }
-};
+}
 </script>
 
 <style lang="scss">

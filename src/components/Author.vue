@@ -35,6 +35,6 @@ query {
 
 <script>
 export default {
-  props: ["showTitle"]
-};
+  props: ['showTitle']
+}
 </script>

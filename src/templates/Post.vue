@@ -1,6 +1,5 @@
 <template>
   <BlogLayout :post="$page.post">
-
     <s-e-o />
 
     <div class="post content-box">
@@ -13,7 +12,7 @@
         />
       </div>
 
-      <div  v-html="$page.post.content" />
+      <div v-html="$page.post.content" />
 
       <div class="post__footer">
         <post-tags :post="$page.post" />
@@ -29,9 +28,9 @@
 </template>
 
 <script>
-import PostTags from "~/components/PostTags";
+import PostTags from '~/components/PostTags'
 // import Author from '~/components/Author.vue'
-import SEO from "~/components/base/SEO.vue";
+import SEO from '~/components/base/SEO.vue'
 
 export default {
   components: {
@@ -44,9 +43,9 @@ export default {
   metaInfo() {
     return {
       title: `${this.$page.post.title} ${
-        this.$page.post.tag ? "- " + this.$page.post.tag.name : ""
+        this.$page.post.tag ? '- ' + this.$page.post.tag.name : ''
       }`
-    };
+    }
   },
   computed: {
     /* avatar () {
@@ -58,33 +57,33 @@ export default {
     }, */
 
     ogImageUrl() {
-      return this.$page.post.cover_image;
+      return this.$page.post.cover_image
     }
   },
   methods: {
     imageLoadError(e) {
-      e.target.src = `/images/authors/default.png`;
+      e.target.src = `/images/authors/default.png`
     },
     description(post, length, clamp) {
       if (post.description) {
-        return post.description;
+        return post.description
       }
-      length = length || 280;
-      clamp = clamp || " ...";
+      length = length || 280
+      clamp = clamp || ' ...'
       let text = post.content
-        .replace(/<pre(.|\n)*?<\/pre>/gm, "")
-        .replace(/<[^>]+>/gm, "");
-      return text.length > length ? `${text.slice(0, length)}${clamp}` : text;
+        .replace(/<pre(.|\n)*?<\/pre>/gm, '')
+        .replace(/<[^>]+>/gm, '')
+      return text.length > length ? `${text.slice(0, length)}${clamp}` : text
     },
     titleCase(str) {
       return str
-        .replace("-", " ")
-        .split(" ")
+        .replace('-', ' ')
+        .split(' ')
         .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-        .join(" ");
+        .join(' ')
     }
   }
-};
+}
 </script>
 
 <static-query>

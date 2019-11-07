@@ -40,7 +40,7 @@ query {
 
 <script>
 // import Author from '~/components/Author.vue'
-import PostCard from "~/components/PostCard.vue";
+import PostCard from '~/components/PostCard.vue'
 
 export default {
   components: {
@@ -48,7 +48,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: "Hello, world!"
+    title: 'Hello, world!'
   }
-};
+}
 </script>
