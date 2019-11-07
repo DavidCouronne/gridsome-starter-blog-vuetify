@@ -24,7 +24,7 @@ You can Get A grade by just adding few lines of code.
 
 In your root directory, create a file `netlify.toml`
 
-```text{codeTitle: "netlify.toml"}
+```toml{codeTitle: "netlify.toml"}
 [[headers]]
   for = "/*"
   [headers.values]
