@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/50efe2bc-15f4-491f-9146-3e17d4955355/deploy-status)](https://app.netlify.com/sites/objective-hugle-1a8641/deploys)
 
 # Gridsome Vuetify Blog Starter
@@ -15,6 +17,12 @@
 + SEO friendly
 
 ## Demo URL
+
+https://gridsome-vuetify-blog-starter.netlify.com/
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/DavidCouronne/gridsome-starter-blog-vuetify)
+
+[![Edit gridsome-vuetify-blog-starter](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/DavidCouronne/gridsome-starter-blog-vuetify)
 
 ## Install
 
