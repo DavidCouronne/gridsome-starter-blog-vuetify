@@ -23,6 +23,46 @@
           <v-icon v-else>mdi-moon-waxing-crescent</v-icon>
         </v-btn>
         <!-- Theme Switcher -->
+
+        <!-- Author links -->
+
+        <v-speed-dial v-model="fab" direction="bottom">
+          <template v-slot:activator>
+            <v-btn text icon rounded dark title="Author links">
+              <v-avatar>
+                <g-image
+                  alt="Author image"
+                  class="author__image"
+                  src="~/assets/images/davidcouronne.jpg"
+                  width="180"
+                  height="180"
+                  blur="5"
+                />
+              </v-avatar>
+            </v-btn>
+          </template>
+          <v-btn
+            title="Github"
+            fab
+            dark
+            small
+            color="dark"
+            href="https://github.com/DavidCouronne/gridsome-starter-blog-vuetify"
+          >
+            <v-icon>mdi-github-circle</v-icon>
+          </v-btn>
+          <v-btn
+            title="Twitter"
+            fab
+            dark
+            small
+            color="blue"
+            href="https://twitter.com/nollan94"
+          >
+            <v-icon>mdi-twitter</v-icon>
+          </v-btn>
+        </v-speed-dial>
+        <!-- Author links -->
       </v-app-bar>
 
       <v-card class="mx-auto my-4" max-width="800" flat>

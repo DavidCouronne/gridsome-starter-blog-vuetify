@@ -69,7 +69,7 @@ export default {
         },
         {
           property: 'og:url',
-          content: this.$static.metadata.siteUrl
+          content: this.$static.metadata.siteUrl + '/'
         },
 
         // Some Twitter Cards Tags

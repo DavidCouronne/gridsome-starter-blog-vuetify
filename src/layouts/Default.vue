@@ -15,7 +15,7 @@
                 <g-image
                   alt="Author image"
                   class="author__image"
-                  src="~/assets/images/author.jpg"
+                  src="~/assets/images/davidcouronne.jpg"
                   width="180"
                   height="180"
                   blur="5"
@@ -23,14 +23,24 @@
               </v-avatar>
             </v-btn>
           </template>
-          <v-btn fab dark small color="green">
-            <v-icon>mdi-pencil</v-icon>
+          <v-btn
+            title="Twitter"
+            fab
+            dark
+            small
+            color="blue"
+            to="https://twitter.com/nollan94"
+          >
+            <v-icon>mdi-twitter</v-icon>
           </v-btn>
-          <v-btn fab dark small color="indigo">
-            <v-icon>mdi-plus</v-icon>
-          </v-btn>
-          <v-btn fab dark small color="red">
-            <v-icon>mdi-delete</v-icon>
+          <v-btn
+            title="Github"
+            fab
+            dark
+            small
+            to="https://github.com/DavidCouronne/gridsome-starter-blog-vuetify"
+          >
+            <v-icon>mdi-github-circle</v-icon>
           </v-btn>
         </v-speed-dial>
       </v-app-bar>
