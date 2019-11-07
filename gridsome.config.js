@@ -5,9 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  siteDescription: 'A sample site for Gridsome plugins',
-  siteUrl: 'https://gridsome-plugin-demo.netlify.com',
+  siteName: 'Gridsome Starter Blog Vuetify',
+  siteDescription: 'A sample starter with Gridsome and Vuetify',
+  siteUrl: 'https://gridsome-vuetify-blog-starter.netlify.com/',
 
   templates: {
     Post: '/:title',
