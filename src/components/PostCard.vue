@@ -12,8 +12,8 @@
           />
         </v-list-item-avatar>
         <v-list-item-content>
-          <h2 class="headline"><g-link :to="$url(post.path)">{{ post.title }}</g-link>
-            
+          <h2 class="headline">
+            <g-link :to="$url(post.path)">{{ post.title }}</g-link>
           </h2>
           <post-meta :post="post" />
           <v-list-item-subtitle v-if="post.author"
