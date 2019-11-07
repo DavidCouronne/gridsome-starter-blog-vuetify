@@ -1,5 +1,6 @@
 <template>
   <BlogLayout :post="$page.post">
+
     <s-e-o />
 
     <div class="post content-box">
@@ -12,7 +13,7 @@
         />
       </div>
 
-      <div class="post__content" v-html="$page.post.content" />
+      <div  v-html="$page.post.content" />
 
       <div class="post__footer">
         <post-tags :post="$page.post" />

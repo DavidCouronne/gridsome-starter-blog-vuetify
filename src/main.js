@@ -3,6 +3,8 @@
 
 import Vuetify from "vuetify";
 import "./assets/style/index.scss";
+//import 'prismjs/themes/prism-tomorrow.css';
+import "./assets/style/prism.js";
 
 import DefaultLayout from "~/layouts/Default.vue";
 import HeroLayout from "~/layouts/Hero.vue";
