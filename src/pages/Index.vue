@@ -62,7 +62,11 @@ export default {
           property: 'og:description',
           content: 'A blog starter with Gridsome and Vuetify'
         },
-        { property: 'og:image', content: 'https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1573144131/gridsome-starter-blog-vuetify.jpg' },
+        {
+          property: 'og:image',
+          content:
+            'https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1573144131/gridsome-starter-blog-vuetify.jpg'
+        },
         {
           property: 'og:url',
           content: this.$static.metadata.siteUrl
@@ -71,7 +75,12 @@ export default {
         // Some Twitter Cards Tags
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: this.$static.metadata.siteName },
-        { name: 'twitter:image', content: 'https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1573144131/gridsome-starter-blog-vuetify.jpg' },
+        { name: 'twitter:site', content: '@nollan29' },
+        {
+          name: 'twitter:image',
+          content:
+            'https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1573144131/gridsome-starter-blog-vuetify.jpg'
+        },
         {
           name: 'twitter:description',
           content: 'A blog starter with Gridsome and Vuetify'
@@ -86,7 +95,8 @@ export default {
             '@type': 'BlogPosting',
             description: 'A blog starter with Gridsome and Vuetify',
             headline: this.$static.metadata.siteName,
-            image: 'https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1573144131/gridsome-starter-blog-vuetify.jpg'
+            image:
+              'https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1573144131/gridsome-starter-blog-vuetify.jpg'
           }
         }
       ]
