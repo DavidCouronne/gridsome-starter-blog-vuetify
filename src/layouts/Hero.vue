@@ -42,7 +42,14 @@
           >
             <v-icon>mdi-github-circle</v-icon>
           </v-btn>
-          <v-btn title="Twitter" fab dark small color="blue" href="https://twitter.com/nollan94">
+          <v-btn
+            title="Twitter"
+            fab
+            dark
+            small
+            color="blue"
+            href="https://twitter.com/nollan94"
+          >
             <v-icon>mdi-twitter</v-icon>
           </v-btn>
         </v-speed-dial>
@@ -58,7 +65,9 @@
             >
               <v-row align="center" justify="center">
                 <v-col class="text-center" cols="12">
-                  <h1 class="display-1 font-weight-thin mb-4">Welcome to my Blog !</h1>
+                  <h1 class="display-1 font-weight-thin mb-4">
+                    Welcome to my Blog !
+                  </h1>
                   <h4 class="subheading">Start reading today!</h4>
                 </v-col>
               </v-row>

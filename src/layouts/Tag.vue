@@ -32,7 +32,14 @@
         >
           <v-icon>mdi-github-circle</v-icon>
         </v-btn>
-        <v-btn title="Twitter" fab dark small color="blue" href="https://twitter.com/nollan94">
+        <v-btn
+          title="Twitter"
+          fab
+          dark
+          small
+          color="blue"
+          href="https://twitter.com/nollan94"
+        >
           <v-icon>mdi-twitter</v-icon>
         </v-btn>
       </v-speed-dial>
