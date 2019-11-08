@@ -1,16 +1,26 @@
+<h1 align="center">Welcome to Gridsome Vuetify Blog Starter 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.3-blue.svg?cacheSeconds=2592000" />
+  
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/nollan94" target="_blank">
+    <img alt="Twitter: nollan94" src="https://img.shields.io/twitter/follow/nollan94.svg?style=social" />
+  </a>
+</p>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/50efe2bc-15f4-491f-9146-3e17d4955355/deploy-status)](https://app.netlify.com/sites/objective-hugle-1a8641/deploys)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/DavidCouronne/gridsome-starter-blog-vuetify/issues)
 [![dependencies Status](https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify/status.svg)](https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify)
 [![devDependencies Status](https://david-dm.org/dwyl/esta/dev-status.svg)](https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify?type=dev)
 
 
-# Gridsome Vuetify Blog Starter
 
+ > A Basic Gridsome Blog starter with Vuetify 2.x
 
- A Basic Gridsome Blog starter with Vuetify 2.x
-
- [**Demo Website**](https://gridsome-vuetify-blog-starter.netlify.com/)
-
+ 
+### ✨ [Demo](https://gridsome-vuetify-blog-starter.netlify.com/)
 
 ## Features
 
