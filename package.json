@@ -10,9 +10,11 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
+    "@gridsome/vue-remark": "^0.1.8",
     "@mdi/font": "^4.5.95",
     "gridsome": "^0.7.9",
     "gridsome-plugin-remark-prismjs-all": "^0.2.3",
+    "gridsome-plugin-remark-shiki": "^0.3.0",
     "vuetify": "^2.1.9"
   },
   "devDependencies": {

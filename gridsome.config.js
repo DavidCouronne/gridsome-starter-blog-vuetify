@@ -15,6 +15,29 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Documentation', // Required
+        baseDir: './docs', // Where .md files are located
+        pathPrefix: '/docs', // Add route prefix. Optional
+        template: './src/templates/Documentation.vue', // Optional
+        plugins: [
+          [
+            'gridsome-plugin-remark-shiki',
+            { theme: 'Material-Theme-Palenight', skipInline: true }
+          ]
+        ],
+        remark: {
+          autolinkHeadings: {
+            content: {
+              type: 'text',
+              value: '§'
+            }
+          }
+        }
+      }
+    },
+    {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
