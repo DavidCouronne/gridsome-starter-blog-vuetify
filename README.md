@@ -1,10 +1,7 @@
-<p align="center">
- <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
- <img src="https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify.svg" alt="Dependecies" >
- <a href="https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify?type=dev" title="devDependencies status"><img src="https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify.svg"/></a>
-</p>
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/50efe2bc-15f4-491f-9146-3e17d4955355/deploy-status)](https://app.netlify.com/sites/objective-hugle-1a8641/deploys)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/DavidCouronne/gridsome-starter-blog-vuetify/issues)
+[![dependencies Status](https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify/status.svg)](https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify)
+[![devDependencies Status](https://david-dm.org/dwyl/esta/dev-status.svg)](https://david-dm.org/DavidCouronne/gridsome-starter-blog-vuetify?type=dev)
 
 
 # Gridsome Vuetify Blog Starter
