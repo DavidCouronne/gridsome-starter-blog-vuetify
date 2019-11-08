@@ -1,5 +1,7 @@
 {
-  "name": "gridsome",
+  "name": "gridsome-starter-blog-vuetify",
+  "description": "A Basic Gridsome Blog starter with Vuetify 2.x",
+  "version": "0.1.3",
   "private": true,
   "scripts": {
     "build": "gridsome build",

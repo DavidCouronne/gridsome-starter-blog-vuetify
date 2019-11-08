@@ -45,3 +45,13 @@
 3. `gridsome develop` to start local dev server at http://localhost:8080
 
 See the [Gridsome docs](https://gridsome.org/) for more information.
+
+
+
+## Notes
+
+ - Check out these other Gridsome Starters where I got a lot of ideas from:
+    - [Gridsome Starter Blog](https://github.com/gridsome/gridsome-starter-blog)
+    - [Gridsome Portfolio Starter](https://github.com/drehimself/gridsome-portfolio-starter)
+    - [Gridsome Vuetify Starter](https://github.com/12vanblart/gridsome-vuetify-starter)
+
