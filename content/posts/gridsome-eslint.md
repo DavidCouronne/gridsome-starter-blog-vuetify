@@ -12,7 +12,7 @@ avatar: "davidcouronne.jpg"
 
 While VueJS has the great [Vue Cli](https://cli.vuejs.org/guide/) tool, Gridsome has "not yet" the equivalent.
 
-To install and configure eElint, we must install our dependencies by hand.
+To install and configure Eslint, we must install our dependencies by hand.
 
 ## Install dev dependencies
 

@@ -183,17 +183,7 @@ Result
 ```
 
 
-## Prompt
 
-``````md
-```bash{promptUser: "John Snow"}{promptHost: "The Wall"}
-yarn build
-```
-``````
-
-```bash{promptUser: "John Snow"}{promptHost: "The Wall"}
-yarn build
-```
 
 ## Options
 
