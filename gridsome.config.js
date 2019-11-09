@@ -15,6 +15,12 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000 // default
+      }
+    },
+    {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {

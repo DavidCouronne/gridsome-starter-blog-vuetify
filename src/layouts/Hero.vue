@@ -58,7 +58,7 @@
 
       <v-card class="mx-auto my-4" max-width="800" flat>
         <v-content>
-          <v-card>
+          <v-card dark>
             <v-img
               dark
               src="https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"

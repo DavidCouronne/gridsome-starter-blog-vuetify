@@ -5,8 +5,8 @@ published: true
 author: "David Couronné"
 tags: ['Gridsome', 'PrismJS']
 canonical_url: false
-description: "Test file for syntax highlighting"
-cover_image: ./images/snapshot-tomorrow.png
+description: "Demo file for syntax highlighting"
+cover_image: https://res.cloudinary.com/dpw19qolx/image/upload/t_cover-image/v1561731158/shahadat-shemul-gnyA8vd3Otc-unsplash.jpg
 ---
 
 ## Basic usage
