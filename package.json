@@ -12,21 +12,21 @@
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.4.0",
+    "@gridsome/transformer-remark": "^0.5.0",
     "@mdi/font": "^4.5.95",
-    "gridsome": "^0.7.12",
-    "gridsome-plugin-remark-prismjs-all": "^0.2.8",
-    "vuetify": "^2.2.11"
+    "gridsome": "^0.7.13",
+    "gridsome-plugin-remark-prismjs-all": "^0.3.2",
+    "vuetify": "^2.2.14"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
-    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/eslint-config-prettier": "^ 6.0.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^6.0.0",
+    "eslint-plugin-vue": "^6.2.1",
     "prettier": "^1.19.1",
     "sass": "^1.23.3",
     "sass-loader": "^8.0.0",

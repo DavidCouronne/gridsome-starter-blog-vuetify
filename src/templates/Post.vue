@@ -118,3 +118,9 @@ query Post ($id: ID!) {
   }
 }
 </page-query>
+
+<style lang="scss">
+img{
+  max-width: 100%;
+}
+</style>
