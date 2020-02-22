@@ -15,7 +15,7 @@
       <h1>{{ $page.post.title }}</h1>
       <p>Posted {{ $page.post.date }}.</p>
 
-      <div v-html="$page.post.content" />
+      <div class="markdown" v-html="$page.post.content" />
 
       <div class="post__footer">
         <post-tags :post="$page.post" />
@@ -120,7 +120,11 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
-img{
+img {
   max-width: 100%;
+}
+
+.markdown {
+  padding: 1rem;
 }
 </style>
