@@ -4,10 +4,12 @@
 import Vuetify from 'vuetify'
 import './assets/style/index.scss'
 import './assets/style/primjs-languages.js'
+import 'gridsome-plugin-remark-container/themes/default.css'
 
 import HeroLayout from '~/layouts/Hero.vue'
 import BlogLayout from '~/layouts/Blog.vue'
 import TagLayout from '~/layouts/Tag.vue'
+import DocsLayout from '~/layouts/DocsLayout.vue'
 
 import { vuetifyConfig } from './vuetify.config.js'
 
@@ -26,4 +28,5 @@ export default function(Vue, { head, appOptions }) {
   Vue.component('HeroLayout', HeroLayout)
   Vue.component('BlogLayout', BlogLayout)
   Vue.component('TagLayout', TagLayout)
+  Vue.component('DocsLayout', DocsLayout)
 }
