@@ -4,7 +4,7 @@
 import Vuetify from 'vuetify'
 import './assets/style/index.scss'
 import './assets/style/primjs-languages.js'
-import 'gridsome-plugin-remark-container/themes/default.css'
+
 
 import HeroLayout from '~/layouts/Hero.vue'
 import BlogLayout from '~/layouts/Blog.vue'
