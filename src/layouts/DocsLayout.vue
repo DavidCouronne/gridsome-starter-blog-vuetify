@@ -8,7 +8,7 @@
       right
       class="text-center"
     >
-      <documentation-toc-links />
+      <documentation-toc-links :subtitles="subtitles" />
     </v-navigation-drawer>
     <!-- /Right Drawer -->
 
@@ -73,6 +73,7 @@
     <!-- Main content -->
     <v-content>
       <v-container
+        id="container"
         class="fill-height"
         fluid
       >
@@ -100,6 +101,9 @@
     components: { DocumentDrawerLinks, DocumentationTocLinks },
     props: {
       source: { type: String, default: '' },
+      subtitles: { type: Array, default: () => [] },
+      links: { type: Array, default: () => [] },
+      path: { type: String, default: () => '/docs/' },
     },
     data: () => ({
       drawer: null,

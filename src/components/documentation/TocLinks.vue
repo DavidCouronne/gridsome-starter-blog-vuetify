@@ -8,6 +8,25 @@
         Contents
       </h3>
     </li>
+    <ul
+      v-if="subtitles.length"
+      class="menu-item submenu"
+    >
+      <li
+        v-for="subtitle in subtitles"
+        :key="subtitle.value"
+        class="submenu__item"
+        :class="'submenu__item-depth-' + subtitle.depth"
+      >
+        <a
+          class="submenu__link"
+          :href="subtitle.anchor"
+          @click.stop.prevent="goTo(`${subtitle.anchor}`)"
+        >
+          {{ subtitle.value }}
+        </a>
+      </li>
+    </ul>
 
     <!-- <template v-for="(item, i) in internalToc">
           <li
@@ -38,6 +57,25 @@
 <script>
   export default {
     name: 'DocumentationTocLinks',
+    props: {
+      source: { type: String, default: '' },
+      subtitles: { type: Array, default: () => [] },
+      links: { type: Array, default: () => [] },
+      path: { type: String, default: () => '/docs/' },
+    },
+    methods: {
+      goTo (id) {
+        this.$vuetify.goTo(id).then(() => {
+          if (!id) return (document.location.hash = '')
+
+          if (history.replaceState) {
+            history.replaceState(null, null, id)
+          } else {
+            document.location.hash = id
+          }
+        })
+      },
+    },
   }
 </script>
 

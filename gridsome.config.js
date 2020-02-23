@@ -3,6 +3,10 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwind = require('tailwindcss')
+// const purgecss = require('@fullhuman/postcss-purgecss')
+const postcssPlugins = [tailwind()]
+// if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Gridsome Starter Blog Vuetify',
@@ -25,7 +29,14 @@ module.exports = {
           'gridsome-plugin-remark-prismjs-all',
           'gridsome-plugin-remark-container',
         ],
-        remark: {},
+        remark: {
+          autolinkHeadings: {
+            content: {
+              type: 'text',
+              value: '#',
+            },
+          },
+        },
       },
     },
     {
@@ -94,6 +105,13 @@ module.exports = {
           },
         ],
       ],
+    },
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
+      },
     },
   },
 }
