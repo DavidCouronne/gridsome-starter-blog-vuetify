@@ -11,6 +11,9 @@ import BlogLayout from '~/layouts/Blog.vue'
 import TagLayout from '~/layouts/Tag.vue'
 import DocsLayout from '~/layouts/DocsLayout.vue'
 
+//Global Components
+import BaseThemeToggle from '@/components/base/ThemeToggle.vue'
+
 import { vuetifyConfig } from './vuetify.config.js'
 
 export default function(Vue, { head, appOptions }) {
@@ -29,4 +32,7 @@ export default function(Vue, { head, appOptions }) {
   Vue.component('BlogLayout', BlogLayout)
   Vue.component('TagLayout', TagLayout)
   Vue.component('DocsLayout', DocsLayout)
+
+  //Set global components
+  Vue.component('BaseThemeToggle', BaseThemeToggle)
 }

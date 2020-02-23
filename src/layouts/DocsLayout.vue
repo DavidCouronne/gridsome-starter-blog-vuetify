@@ -19,7 +19,13 @@
       </v-list>
     </v-navigation-drawer>
     <!-- navbar -->
-    <v-app-bar app clipped-right clipped-left dark class="yellow darken-2 text-center">
+    <v-app-bar
+      app
+      clipped-right
+      clipped-left
+      dark
+      class="yellow darken-2 text-center"
+    >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Toolbar</v-toolbar-title>
       <v-btn color="accent" icon router exact :to="$url('/')" title="Home">
@@ -78,13 +84,8 @@
 </template>
 
 <script>
-import BaseThemeToggle from '@/components/base/ThemeToggle.vue'
-import DocumentationDrawer from '@/components/documentation/Drawer.vue'
 export default {
-  components: {
-    BaseThemeToggle,
-    DocumentationDrawer
-  },
+  components: {},
   props: {
     source: String
   },
