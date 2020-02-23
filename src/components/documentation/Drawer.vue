@@ -21,6 +21,7 @@
 
 <script>
 export default {
+    name: 'DocumentationDrawer',
 data: () => ({
     drawer: null,
     drawerRight: null,
