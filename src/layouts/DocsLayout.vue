@@ -54,6 +54,15 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <template v-slot:append>
+        <v-divider />
+
+        <div class="px-4 py-2 d-flex">
+          <v-spacer />
+
+          <base-theme-toggle />
+        </div>
+      </template>
     </v-navigation-drawer>
     <!-- /left drawer -->
     <!-- left temporary drawer -->
@@ -76,7 +85,7 @@
 
     <v-footer app color="blue-grey" class="white--text">
       <span>Vuetify</span>
-      <base-theme-toggle />
+
       <v-spacer />
       <span>&copy; 2019</span>
     </v-footer>
