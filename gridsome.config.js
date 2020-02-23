@@ -15,6 +15,20 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Documentation', // Required
+        baseDir: './content/docs', // Where .md files are located
+        pathPrefix: '/docs', // Add route prefix. Optional
+        template: './src/templates/Documentation.vue', // Optional
+        plugins: [
+          'gridsome-plugin-remark-prismjs-all',
+          'gridsome-plugin-remark-container'
+        ],
+        remark: {}
+      }
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000 // default
@@ -43,6 +57,7 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
+        'gridsome-plugin-remark-container',
         [
           'gridsome-plugin-remark-prismjs-all',
           {
