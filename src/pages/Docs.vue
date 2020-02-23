@@ -39,6 +39,14 @@ query Documentation {
         path
         title
         description
+        headings (depth: h1) {
+      value
+    }
+    subtitles: headings {
+      depth
+      value
+      anchor
+    }
       }
     }
   }
