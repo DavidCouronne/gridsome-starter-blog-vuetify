@@ -37,13 +37,7 @@
     </v-app-bar>
     <!-- /navbar -->
     <!-- left drawer -->
-    <v-navigation-drawer
-      v-model="drawer"
-      clipped
-      left
-      app
-      class="green darken-2 text-center"
-    >
+    <v-navigation-drawer v-model="drawer" clipped left app class="">
       <v-list dense>
         <v-list-item @click.stop="left = !left">
           <v-list-item-action>
@@ -54,6 +48,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <DocumentDrawerLinks />
       <template v-slot:append>
         <v-divider />
 
@@ -93,8 +88,9 @@
 </template>
 
 <script>
+import DocumentDrawerLinks from '@/components/documentation/DrawerLinks.vue'
 export default {
-  components: {},
+  components: { DocumentDrawerLinks },
   props: {
     source: String
   },
