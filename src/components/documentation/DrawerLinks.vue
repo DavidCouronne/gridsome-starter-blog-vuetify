@@ -46,6 +46,7 @@ export default {
     right: false,
     left: false,
     items: [
+      { text: 'All docs', to: '/docs/' },
       { header: 'First section' },
       {
         text: 'bienvenue',
