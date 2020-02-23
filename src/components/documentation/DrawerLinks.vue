@@ -11,7 +11,7 @@
 
       <base-group v-else-if="item.group" :key="`group-${i}`" :item="item" />
 
-      <v-list-item v-else :key="`item-${i}`" :to="item.to">
+      <v-list-item v-else :key="`item-${i}`" :to="item.to" exact>
         <v-list-item-content>
           <v-list-item-title>
             <span v-text="item.text" />
