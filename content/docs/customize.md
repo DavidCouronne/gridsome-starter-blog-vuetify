@@ -1,7 +1,7 @@
 ---
-title: Second test file
-author: david
-description: tests with prism
+title: Customize
+author: David Couronné
+description: Customize gridsome starter blog vuetify
 date: 2020-02-23
 ---
 

@@ -66,12 +66,12 @@ query Documentation {
         { text: 'All docs', to: '/docs/' },
         { header: 'First section' },
         {
-          text: 'bienvenue',
-          to: '/docs/introduction',
+          text: 'Installation',
+          to: '/docs/installation',
         },
         {
-          text: 'second document',
-          to: '/docs/latex',
+          text: 'Customize',
+          to: '/docs/customize',
         },
         { divider: true },
       ],
