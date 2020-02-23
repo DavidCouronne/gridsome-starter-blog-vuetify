@@ -1,12 +1,10 @@
 <template>
-  <button
-    role="button"
-    aria-label="Toggle dark/light"
-    class="toggle-theme"
-    @click.prevent="toggleTheme"
+  <v-btn
+    icon
+    @click="$vuetify.theme.dark = !$vuetify.theme.dark"
   >
     <svg
-      v-if="darkTheme"
+      v-if="$vuetify.theme.dark"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -87,42 +85,17 @@
     >
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
     </svg>
-  </button>
+  </v-btn>
 </template>
 
 <script>
   export default {
-    data () {
-      return {
-        darkTheme: false,
-      }
-    },
-    mounted () {
-      if (window.__theme === 'dark') this.darkTheme = true
-    },
-    methods: {
-      toggleTheme () {
-        this.darkTheme = !this.darkTheme
+    name: 'BaseThemeToggle',
 
-        // This is using a script that is added in index.html
-        window.__setPreferredTheme(this.darkTheme ? 'dark' : 'light')
+    watch: {
+      '$vuetify.theme.dark' (val) {
+        localStorage.setItem('vuetify__documentation__theme', val)
       },
     },
   }
 </script>
-
-<style lang="scss">
-.toggle-theme {
-  background-color: transparent;
-  border: 0;
-  color: var(--body-color);
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-  &:focus {
-    outline: none;
-  }
-}
-</style>

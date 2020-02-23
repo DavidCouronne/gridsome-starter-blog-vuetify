@@ -11,14 +11,28 @@ module.exports = {
 
   templates: {
     Post: '/:title',
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
   },
   plugins: [
     {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Documentation', // Required
+        baseDir: './content/docs', // Where .md files are located
+        pathPrefix: '/docs', // Add route prefix. Optional
+        template: './src/templates/Documentation.vue', // Optional
+        plugins: [
+          'gridsome-plugin-remark-prismjs-all',
+          'gridsome-plugin-remark-container',
+        ],
+        remark: {},
+      },
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
-        cacheTime: 600000 // default
-      }
+        cacheTime: 600000, // default
+      },
     },
     {
       // Create posts from markdown files
@@ -30,11 +44,11 @@ module.exports = {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'Tag',
-            create: true
-          }
-        }
-      }
-    }
+            create: true,
+          },
+        },
+      },
+    },
   ],
   transformers: {
     // Add markdown support to all file-system sources
@@ -43,42 +57,43 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
+        'gridsome-plugin-remark-container',
         [
           'gridsome-plugin-remark-prismjs-all',
           {
             aliases: {
               js: 'javascript',
-              sh: 'bash'
+              sh: 'bash',
             },
             languageExtensions: [
               {
                 language: 'vue',
                 extend: 'html',
                 definition: {
-                  vue_types: /(Vue)/
+                  vue_types: /(Vue)/,
                 },
                 insertBefore: {
                   function: {
-                    vue_keywords: /(v-if|v-for)/
-                  }
-                }
+                    vue_keywords: /(v-if|v-for)/,
+                  },
+                },
               },
               {
                 language: 'toml',
                 extend: 'yaml',
                 definition: {
-                  toml_types: /(Toml)/
+                  toml_types: /(Toml)/,
                 },
                 insertBefore: {
                   function: {
-                    toml_keywords: /(build|header)/
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      ]
-    }
-  }
+                    toml_keywords: /(build|header)/,
+                  },
+                },
+              },
+            ],
+          },
+        ],
+      ],
+    },
+  },
 }

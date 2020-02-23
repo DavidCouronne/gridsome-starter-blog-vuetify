@@ -1,8 +1,8 @@
-export function vuetifyConfig() {
+export function vuetifyConfig () {
   return {
     rtl: false,
     icons: {
-      iconfont: 'mdi'
+      iconfont: 'mdi',
     },
     theme: {
       themes: {
@@ -14,7 +14,7 @@ export function vuetifyConfig() {
           info: '#2196F3',
           warning: '#FB8C00',
           error: '#FF5252',
-          anchor: '#BDBDFF'
+          anchor: '#BDBDFF',
         },
         light: {
           primary: '#1976D2',
@@ -24,9 +24,9 @@ export function vuetifyConfig() {
           info: '#2196F3',
           warning: '#FB8C00',
           error: '#FF5252',
-          anchor: '#2424FF'
-        }
-      }
-    }
+          anchor: '#2424FF',
+        },
+      },
+    },
   }
 }
