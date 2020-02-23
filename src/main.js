@@ -27,7 +27,7 @@ export default function(Vue, { head, appOptions }) {
   Vue.use(Vuetify)
 
   appOptions.vuetify = new Vuetify(vuetifyOpts)
-  // Set layout as a global component
+  // Set layout as a global component 
   Vue.component('HeroLayout', HeroLayout)
   Vue.component('BlogLayout', BlogLayout)
   Vue.component('TagLayout', TagLayout)

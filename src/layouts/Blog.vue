@@ -10,7 +10,7 @@
       :src="post.cover_image"
     >
       <v-btn dark icon router exact :to="$url('/')" title="Home">
-        <v-icon>mdi-home</v-icon>
+        <v-icon>mdi-home</v-icon> 
       </v-btn>
 
       <v-spacer></v-spacer>

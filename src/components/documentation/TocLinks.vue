@@ -9,7 +9,7 @@
             v-if="item.visible"
             :key="i"
             :class="{
-              'documentation-toc__link--subheader': item.subheader,
+              'documentation-toc__link--subheader': item.subheader, 
               'mb-2': i + 1 !== internalToc.length,
               'primary--text': activeIndex === i,
               'text--disabled': activeIndex !== i

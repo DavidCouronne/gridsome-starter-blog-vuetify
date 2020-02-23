@@ -5,7 +5,7 @@ description: Tests with vue-remark plugin
 date: 2020-02-22
 ---
 
-```js{9-10}{codeTitle: "gridsome.config.js"}
+```js{9-10}{codeTitle: "gridsome.config.js"} 
 {
   use: '@gridsome/vue-remark',
   options: {

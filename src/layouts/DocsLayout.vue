@@ -15,7 +15,7 @@
     <!-- navbar -->
     <v-app-bar
       app
-      clipped-right
+      clipped-right 
       clipped-left
       dark
       class="yellow darken-2 text-center"

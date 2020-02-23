@@ -9,7 +9,7 @@ query {
     siteUrl
   }
 }
-</static-query>
+</static-query> 
 
 <script>
 export default {

@@ -38,7 +38,7 @@
       </v-card-actions>
     </v-card>
   </v-col>
-</template>
+</template> 
 
 <script>
 import PostMeta from '~/components/PostMeta'

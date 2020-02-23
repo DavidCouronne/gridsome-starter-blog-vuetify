@@ -12,7 +12,7 @@
       {{ tag.title }}
     </v-chip>
   </div>
-</template>
+</template> 
 
 <script>
 export default {

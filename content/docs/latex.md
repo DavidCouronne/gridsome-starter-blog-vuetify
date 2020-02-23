@@ -7,7 +7,7 @@ date: 2020-02-23
 
 ## Working with TikZ or PsTricks
 
-In `sample-tikz.tex`:
+In `sample-tikz.tex`: 
 
 ```latex
 \documentclass{article}
