@@ -11,15 +11,15 @@ import BlogLayout from '~/layouts/Blog.vue'
 import TagLayout from '~/layouts/Tag.vue'
 import DocsLayout from '~/layouts/DocsLayout.vue'
 
-//Global Components
+// Global Components
 import BaseThemeToggle from '@/components/base/ThemeToggle.vue'
 
 import { vuetifyConfig } from './vuetify.config.js'
 
-export default function(Vue, { head, appOptions }) {
+export default function (Vue, { head, appOptions }) {
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+    href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
   })
 
   const vuetifyOpts = vuetifyConfig()
@@ -33,6 +33,6 @@ export default function(Vue, { head, appOptions }) {
   Vue.component('TagLayout', TagLayout)
   Vue.component('DocsLayout', DocsLayout)
 
-  //Set global components
+  // Set global components
   Vue.component('BaseThemeToggle', BaseThemeToggle)
 }

@@ -16,7 +16,11 @@
         </div>
       </v-card-text>
       <v-card-actions>
-        <v-btn dark color="primary" :to="doc.node.path">
+        <v-btn
+          dark
+          color="primary"
+          :to="doc.node.path"
+        >
           Read More
         </v-btn>
       </v-card-actions>
@@ -42,9 +46,9 @@ query Documentation {
 </page-query>
 
 <script>
-export default {
-  metaInfo: {
-    title: 'Docs'
+  export default {
+    metaInfo: {
+      title: 'Docs',
+    },
   }
-}
 </script>

@@ -11,7 +11,7 @@ module.exports = {
 
   templates: {
     Post: '/:title',
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
   },
   plugins: [
     {
@@ -23,16 +23,16 @@ module.exports = {
         template: './src/templates/Documentation.vue', // Optional
         plugins: [
           'gridsome-plugin-remark-prismjs-all',
-          'gridsome-plugin-remark-container'
+          'gridsome-plugin-remark-container',
         ],
-        remark: {}
-      }
+        remark: {},
+      },
     },
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        cacheTime: 600000 // default
-      }
+        cacheTime: 600000, // default
+      },
     },
     {
       // Create posts from markdown files
@@ -44,11 +44,11 @@ module.exports = {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'Tag',
-            create: true
-          }
-        }
-      }
-    }
+            create: true,
+          },
+        },
+      },
+    },
   ],
   transformers: {
     // Add markdown support to all file-system sources
@@ -63,37 +63,37 @@ module.exports = {
           {
             aliases: {
               js: 'javascript',
-              sh: 'bash'
+              sh: 'bash',
             },
             languageExtensions: [
               {
                 language: 'vue',
                 extend: 'html',
                 definition: {
-                  vue_types: /(Vue)/
+                  vue_types: /(Vue)/,
                 },
                 insertBefore: {
                   function: {
-                    vue_keywords: /(v-if|v-for)/
-                  }
-                }
+                    vue_keywords: /(v-if|v-for)/,
+                  },
+                },
               },
               {
                 language: 'toml',
                 extend: 'yaml',
                 definition: {
-                  toml_types: /(Toml)/
+                  toml_types: /(Toml)/,
                 },
                 insertBefore: {
                   function: {
-                    toml_keywords: /(build|header)/
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      ]
-    }
-  }
+                    toml_keywords: /(build|header)/,
+                  },
+                },
+              },
+            ],
+          },
+        ],
+      ],
+    },
+  },
 }

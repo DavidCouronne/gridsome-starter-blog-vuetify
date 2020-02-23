@@ -8,7 +8,7 @@
       right
       class="text-center"
     >
-      <DocumentationTocLinks />
+      <documentation-toc-links />
     </v-navigation-drawer>
     <!-- /Right Drawer -->
 
@@ -22,8 +22,24 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Toolbar</v-toolbar-title>
-      <v-btn color="accent" icon router exact :to="$url('/')" title="Home">
-        <v-icon>mdi-home-city-outline</v-icon>
+      <v-btn
+        dark
+        icon
+        router
+        exact
+        :to="$url('/')"
+        title="Home"
+      >
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        router
+        exact
+        :to="$url('/docs')"
+        title="Docs"
+      >
+        <v-icon>mdi-book-open-page-variant</v-icon>
       </v-btn>
       <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawerRight = !drawerRight" />
@@ -31,13 +47,19 @@
     <!-- /navbar -->
 
     <!-- left drawer -->
-    <v-navigation-drawer v-model="drawer" clipped left app class="">
+    <v-navigation-drawer
+      v-model="drawer"
+      clipped
+      left
+      app
+      class=""
+    >
       <v-list dense>
         <v-list-item-content>
           <v-list-item-title>Documentation</v-list-item-title>
         </v-list-item-content>
       </v-list>
-      <DocumentDrawerLinks />
+      <document-drawer-links />
       <template v-slot:append>
         <v-divider />
         <div class="px-4 py-2 d-flex">
@@ -50,13 +72,20 @@
 
     <!-- Main content -->
     <v-content>
-      <v-container class="fill-height" fluid>
+      <v-container
+        class="fill-height"
+        fluid
+      >
         <slot />
       </v-container>
     </v-content>
     <!-- /Main content -->
 
-    <v-footer app color="blue-grey" class="white--text">
+    <v-footer
+      app
+      color="blue-grey"
+      class="white--text"
+    >
       <span>David Couronné</span>
       <v-spacer />
       <span>&copy; 2020-Present</span>
@@ -65,20 +94,20 @@
 </template>
 
 <script>
-import DocumentDrawerLinks from '@/components/documentation/DrawerLinks.vue'
-import DocumentationTocLinks from '@/components/documentation/TocLinks.vue'
-export default {
-  components: { DocumentDrawerLinks, DocumentationTocLinks },
-  props: {
-    source: String
-  },
-  data: () => ({
-    drawer: null,
-    drawerRight: null,
-    right: false,
-    left: false
-  })
-}
+  import DocumentDrawerLinks from '@/components/documentation/DrawerLinks.vue'
+  import DocumentationTocLinks from '@/components/documentation/TocLinks.vue'
+  export default {
+    components: { DocumentDrawerLinks, DocumentationTocLinks },
+    props: {
+      source: { type: String, default: '' },
+    },
+    data: () => ({
+      drawer: null,
+      drawerRight: null,
+      right: false,
+      left: false,
+    }),
+  }
 </script>
 
 <style lang="scss">

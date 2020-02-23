@@ -9,7 +9,10 @@
       blur="5"
     />
 
-    <h1 v-if="showTitle" class="author__site-title">
+    <h1
+      v-if="showTitle"
+      class="author__site-title"
+    >
       {{ $static.metadata.siteName }}
     </h1>
 
@@ -34,7 +37,7 @@ query {
 </static-query>
 
 <script>
-export default {
-  props: ['showTitle']
-}
+  export default {
+    props: { showTitle: Boolean },
+  }
 </script>

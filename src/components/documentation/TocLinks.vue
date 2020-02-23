@@ -1,7 +1,12 @@
 <template>
-  <ul id="documentation-toc" class="pt-8 mb-6 documentation-toc">
+  <ul
+    id="documentation-toc"
+    class="pt-8 mb-6 documentation-toc"
+  >
     <li class="mb-2">
-      <h3 class="body-1 text--primary">Contents</h3>
+      <h3 class="body-1 text--primary">
+        Contents
+      </h3>
     </li>
 
     <!-- <template v-for="(item, i) in internalToc">
@@ -9,7 +14,7 @@
             v-if="item.visible"
             :key="i"
             :class="{
-              'documentation-toc__link--subheader': item.subheader, 
+              'documentation-toc__link--subheader': item.subheader,
               'mb-2': i + 1 !== internalToc.length,
               'primary--text': activeIndex === i,
               'text--disabled': activeIndex !== i
@@ -31,9 +36,9 @@
 </template>
 
 <script>
-export default {
-  name: 'DocumentationTocLinks'
-}
+  export default {
+    name: 'DocumentationTocLinks',
+  }
 </script>
 
 <style lang="scss">

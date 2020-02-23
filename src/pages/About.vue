@@ -13,9 +13,9 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: 'About us'
+  export default {
+    metaInfo: {
+      title: 'About us',
+    },
   }
-}
 </script>

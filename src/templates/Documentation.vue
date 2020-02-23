@@ -1,7 +1,9 @@
 <template>
   <DocsLayout>
     <h1>{{ $page.documentation.title }}</h1>
-    <p class="intro">{{ $page.documentation.description }}</p>
+    <p class="intro">
+      {{ $page.documentation.description }}
+    </p>
     <VueRemarkContent />
   </DocsLayout>
 </template>

@@ -2,15 +2,40 @@
   <v-app>
     <div>
       <v-app-bar app>
-        <v-btn color="accent" icon router exact :to="$url('/')" title="Home">
+        <v-btn
+          color="accent"
+          icon
+          router
+          exact
+          :to="$url('/')"
+          title="Home"
+        >
           <v-icon>mdi-home-city-outline</v-icon>
+        </v-btn>
+        <v-btn
+          color="accent"
+          icon
+          router
+          exact
+          :to="$url('/docs')"
+          title="Docs"
+        >
+          <v-icon>mdi-book-open-page-variant</v-icon>
         </v-btn>
         <v-toolbar-title>{{ $static.metadata.siteName }}</v-toolbar-title>
         <v-spacer />
 
-        <v-speed-dial v-model="fab" direction="bottom">
+        <v-speed-dial
+          v-model="fab"
+          direction="bottom"
+        >
           <template v-slot:activator>
-            <v-btn text icon rounded dark>
+            <v-btn
+              text
+              icon
+              rounded
+              dark
+            >
               <v-avatar>
                 <g-image
                   alt="Author image"

@@ -2,7 +2,7 @@ import { injectGlobal } from 'vue-styled-components'
 
 const COLORS = {
   white: '#f0f0f0',
-  black: '#22222f'
+  black: '#22222f',
 }
 
 const lables = [
@@ -19,7 +19,7 @@ const lables = [
   { lang: 'toml', tag: 'toml', bg: '#8bc34a' },
   { lang: 'diff', tag: 'diff', bg: '#e6ffed' },
   { lang: 'markdown', tag: 'md', bg: 'white' },
-  { lang: 'graphql', tag: 'GraphQL', bg: '#e10098', color: '#fff' }
+  { lang: 'graphql', tag: 'GraphQL', bg: '#e10098', color: '#fff' },
 ]
 
 const lablesStyles = lables
@@ -29,9 +29,9 @@ const lablesStyles = lables
         content: '${tag}';
         ${bg && `background: ${bg};`}
         ${color && `color: ${color};`}
-      }`
+      }`,
   )
-  .join(`\n`)
+  .join('\n')
 
 injectGlobal`
 
