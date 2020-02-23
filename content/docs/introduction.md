@@ -1,7 +1,7 @@
 ---
-title: test
+title: Markdown test file
 author: david
-description: test file
+description: Tests with vue-remark plugin
 date: 2020-02-22
 ---
 
