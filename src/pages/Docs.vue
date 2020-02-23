@@ -23,7 +23,7 @@
     </v-card>
 
     <!-- end post -->
-  </DocsLayout> 
+  </DocsLayout>
 </template>
 
 <page-query>

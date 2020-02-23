@@ -10,4 +10,4 @@ query {
     siteName
   }
 }
-</static-query> 
+</static-query>

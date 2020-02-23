@@ -10,7 +10,7 @@
 
         <v-speed-dial v-model="fab" direction="bottom">
           <template v-slot:activator>
-            <v-btn text icon rounded dark> 
+            <v-btn text icon rounded dark>
               <v-avatar>
                 <g-image
                   alt="Author image"

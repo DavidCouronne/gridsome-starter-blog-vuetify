@@ -10,7 +10,7 @@ module.exports = {
   siteUrl: 'https://gridsome-vuetify-blog-starter.netlify.com/',
 
   templates: {
-    Post: '/:title', 
+    Post: '/:title',
     Tag: '/tag/:id'
   },
   plugins: [

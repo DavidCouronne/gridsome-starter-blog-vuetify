@@ -16,7 +16,7 @@ query Documentation ($id: ID!) {
 }
 </page-query>
 
-<style lang="scss"> 
+<style lang="scss">
 img {
   max-width: 100%;
 }

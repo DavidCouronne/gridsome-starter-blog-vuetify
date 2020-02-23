@@ -15,7 +15,7 @@
       stroke="currentColor"
       stroke-width="2"
       stroke-linecap="round"
-      stroke-linejoin="round" 
+      stroke-linejoin="round"
       class="feather feather-sun"
     >
       <circle cx="12" cy="12" r="5" />

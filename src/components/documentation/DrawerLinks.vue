@@ -4,7 +4,7 @@
       <v-subheader
         v-if="item.header"
         :key="`subheader-${i}`"
-        v-text="item.header" 
+        v-text="item.header"
       />
 
       <v-divider v-else-if="item.divider" :key="`divider-${i}`" />
