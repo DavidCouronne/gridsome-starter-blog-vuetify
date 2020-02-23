@@ -9,6 +9,11 @@
 
 <script>
   export default {
-    props: ['post'],
+    props: {
+      post: {
+        type: Object,
+        default: null,
+      },
+    },
   }
 </script>
