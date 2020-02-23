@@ -1,23 +1,23 @@
 <template>
   <v-app id="inspire">
+    <!-- Right Drawer -->
     <v-navigation-drawer
       v-model="drawerRight"
       app
       clipped
       right
-      class="purple darken-2 text-center"
+      class="text-center"
     >
       <v-list dense>
-        <v-list-item @click.stop="right = !right">
-          <v-list-item-action>
-            <v-icon>mdi-exit-to-app</v-icon>
-          </v-list-item-action>
+        <v-list-item>
           <v-list-item-content>
-            <v-list-item-title>First Drawer</v-list-item-title>
+            <v-list-item-title>TOC</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <!-- /Right Drawer -->
+
     <!-- navbar -->
     <v-app-bar
       app
@@ -32,42 +32,28 @@
         <v-icon>mdi-home-city-outline</v-icon>
       </v-btn>
       <v-spacer />
-
       <v-app-bar-nav-icon @click.stop="drawerRight = !drawerRight" />
     </v-app-bar>
     <!-- /navbar -->
+
     <!-- left drawer -->
     <v-navigation-drawer v-model="drawer" clipped left app class="">
       <v-list dense>
-        <v-list-item @click.stop="left = !left">
-          <v-list-item-action>
-            <v-icon>mdi-exit-to-app</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Open Temporary Drawer</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>Documentation</v-list-item-title>
+        </v-list-item-content>
       </v-list>
       <DocumentDrawerLinks />
       <template v-slot:append>
         <v-divider />
-
         <div class="px-4 py-2 d-flex">
           <v-spacer />
-
           <base-theme-toggle />
         </div>
       </template>
     </v-navigation-drawer>
     <!-- /left drawer -->
-    <!-- left temporary drawer -->
-    <v-navigation-drawer
-      v-model="left"
-      fixed
-      temporary
-      class="orange darken-2 text-center"
-    />
-    <!-- /left temporary drawer -->
+
     <!-- Main content -->
     <v-content>
       <v-container class="fill-height" fluid>
@@ -76,13 +62,10 @@
     </v-content>
     <!-- /Main content -->
 
-    <v-navigation-drawer v-model="right" fixed right temporary />
-
     <v-footer app color="blue-grey" class="white--text">
-      <span>Vuetify</span>
-
+      <span>David Couronné</span>
       <v-spacer />
-      <span>&copy; 2019</span>
+      <span>&copy; 2020-Present</span>
     </v-footer>
   </v-app>
 </template>
