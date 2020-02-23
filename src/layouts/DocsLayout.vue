@@ -8,13 +8,7 @@
       right
       class="text-center"
     >
-      <v-list dense>
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>TOC</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      <DocumentationTocLinks />
     </v-navigation-drawer>
     <!-- /Right Drawer -->
 
@@ -72,8 +66,9 @@
 
 <script>
 import DocumentDrawerLinks from '@/components/documentation/DrawerLinks.vue'
+import DocumentationTocLinks from '@/components/documentation/TocLinks.vue'
 export default {
-  components: { DocumentDrawerLinks },
+  components: { DocumentDrawerLinks, DocumentationTocLinks },
   props: {
     source: String
   },
