@@ -39,7 +39,49 @@
         <v-icon>mdi-book-open-page-variant</v-icon>
       </v-btn>
       <v-spacer />
-      <v-app-bar-nav-icon @click.stop="drawerRight = !drawerRight" />
+      <base-theme-toggle />
+      <!-- Author links -->
+
+      <v-speed-dial
+        v-model="fab"
+        direction="bottom"
+      >
+        <template v-slot:activator>
+          <v-btn
+            icon
+            rounded
+            dark
+            title="Author links"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+        <v-btn
+          title="Github"
+          fab
+          dark
+          small
+          color="dark"
+          href="https://github.com/DavidCouronne/gridsome-starter-blog-vuetify"
+        >
+          <v-icon>mdi-github-circle</v-icon>
+        </v-btn>
+        <v-btn
+          title="Twitter"
+          fab
+          dark
+          small
+          color="blue"
+          href="https://twitter.com/nollan94"
+        >
+          <v-icon>mdi-twitter</v-icon>
+        </v-btn>
+      </v-speed-dial>
+      <!-- Author links -->
+      <v-app-bar-nav-icon
+        title="Toggle Table Of Contents"
+        @click.stop="drawerRight = !drawerRight"
+      />
     </v-app-bar>
     <!-- /navbar -->
 
