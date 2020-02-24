@@ -16,7 +16,7 @@
       <p>Posted {{ $page.post.date }}.</p>
 
       <div
-        class="markdown"
+        class="rich-text"
         v-html="$page.post.content"
       />
 
