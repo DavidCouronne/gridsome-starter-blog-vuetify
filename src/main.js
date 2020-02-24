@@ -4,6 +4,7 @@
 import Vuetify from 'vuetify'
 import './assets/style/index.scss'
 import './assets/style/primjs-languages.js'
+require("gridsome-plugin-remark-prismjs-all/themes/night-owl.css");
 
 import HeroLayout from '~/layouts/Hero.vue'
 import BlogLayout from '~/layouts/Blog.vue'
