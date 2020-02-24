@@ -23,18 +23,15 @@
         :item="item"
       />
 
-      <v-list-item
+      <base-item
         v-else
         :key="`item-${i}`"
+        :chip="genChip(item)"
+        :icon="item.icon"
+        :subtext="item.subtext"
+        :text="item.text"
         :to="item.to"
-        exact
-      >
-        <v-list-item-content>
-          <v-list-item-title>
-            <span v-text="item.text" />
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
+      />
     </template>
   </v-list>
 </template>
@@ -55,6 +52,9 @@ query Documentation {
 </page-query>
 
 <script>
+  import links from '@/data/sidebar.yaml'
+  import { genChip } from '@/util/helpers'
+
   export default {
     name: 'DocumentationDrawerLinks',
     data: () => ({
@@ -62,20 +62,15 @@ query Documentation {
       drawerRight: null,
       right: false,
       left: false,
-      items: [
-        { text: 'All docs', to: '/docs/' },
-        { header: 'First section' },
-        {
-          text: 'Installation',
-          to: '/docs/installation',
-        },
-        {
-          text: 'Customize',
-          to: '/docs/customize',
-        },
-        { divider: true },
-      ],
     }),
+    computed: {
+      items () {
+        return links
+      },
+    },
+    methods: {
+      genChip,
+    },
   }
 </script>
 
