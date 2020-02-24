@@ -3,7 +3,7 @@
 
 import Vuetify from 'vuetify'
 import './assets/style/index.scss'
-import './assets/style/primjs-languages.js'
+// import './assets/style/primjs-languages.js'
 
 import HeroLayout from '~/layouts/Hero.vue'
 import BlogLayout from '~/layouts/Blog.vue'
