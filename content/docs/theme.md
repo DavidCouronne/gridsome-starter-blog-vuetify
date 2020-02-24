@@ -7,9 +7,7 @@ date: 2020-02-24
 
 ## Vuetify theme
 
-By default, Vuetify has a standard theme applied for all components. This can be easily changed. Simply pass a theme property to the Vuetify constructor. You can choose to modify all or only some of the theme properties, with the remaining inheriting from the default. 
-
-You can configure this in `/src/vuetify.config.js`:
+You can configure the basics colors in `/src/vuetify.config.js`:
 
 ```js{codeTitle: "/src/vuetify.config.js"}
 export function vuetifyConfig () {
@@ -51,18 +49,5 @@ export function vuetifyConfig () {
 You can customize the links in `src/data/sidebar.yaml`:
 
 ```yaml{codeTitle: "src/data/sidebar.yaml"}
----
-- group: getting-started
-  text: gettingStarted
-  icon: mdi-speedometer
-  children:
-    - text: Installation
-      to: /docs/installation
-- divider: true
-- group: customization
-  text: customization
-  icon: mdi-cogs
-  children:
-    - text: theme
-      to: /docs/customize
+
 ```

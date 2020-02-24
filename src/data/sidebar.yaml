@@ -5,6 +5,7 @@
   children:
     - text: Installation
       to: /docs/installation
+- divider: true
 - group: customization
   text: customization
   icon: mdi-cogs

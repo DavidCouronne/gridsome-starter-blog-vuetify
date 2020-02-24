@@ -1,0 +1,6 @@
+---
+name: Starter Blog Vuetify
+description: A Basic Gridsome Blog starter with Vuetify 2.x
+url: https://gridsome-vuetify-blog-starter.netlify.com/
+favicon: https://raw.githubusercontent.com/DavidCouronne/gridsome-starter-blog-vuetify/master/src/favicon.png
+maintainer: David Couronné
