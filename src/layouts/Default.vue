@@ -17,7 +17,7 @@
           icon
           router
           exact
-          :to="$url('/docs')"
+          :to="$url('/docs/installation')"
           title="Docs"
         >
           <v-icon>mdi-book-open-page-variant</v-icon>
