@@ -1,5 +1,8 @@
 <template>
   <v-btn
+    role="button"
+    aria-label="Toggle dark/light"
+    title="Toggle dark/light"
     icon
     @click="$vuetify.theme.dark = !$vuetify.theme.dark"
   >

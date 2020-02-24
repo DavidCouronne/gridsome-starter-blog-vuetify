@@ -1,15 +1,12 @@
 <template>
   <v-app id="inspire">
     <!-- Right Drawer -->
-    <v-navigation-drawer
-      v-model="drawerRight"
-      app
-      clipped
-      right
-      class="text-center"
-    >
-      <documentation-toc-links :subtitles="subtitles" />
-    </v-navigation-drawer>
+
+    <documentation-toc-links
+      :subtitles="subtitles"
+      :drawer-right="drawerRight"
+    />
+
     <!-- /Right Drawer -->
 
     <!-- navbar -->
@@ -18,10 +15,10 @@
       clipped-right
       clipped-left
       dark
-      class="yellow darken-2 text-center"
+      class="text-center"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Toolbar</v-toolbar-title>
+      <v-toolbar-title>Gridsome Starter Blog Vuetify</v-toolbar-title>
       <v-btn
         dark
         icon
@@ -36,13 +33,55 @@
         icon
         router
         exact
-        :to="$url('/docs')"
+        :to="$url('/docs/installation')"
         title="Docs"
       >
         <v-icon>mdi-book-open-page-variant</v-icon>
       </v-btn>
       <v-spacer />
-      <v-app-bar-nav-icon @click.stop="drawerRight = !drawerRight" />
+      <base-theme-toggle />
+      <!-- Author links -->
+
+      <v-speed-dial
+        v-model="fab"
+        direction="bottom"
+      >
+        <template v-slot:activator>
+          <v-btn
+            icon
+            rounded
+            dark
+            title="Author links"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+        <v-btn
+          title="Github"
+          fab
+          dark
+          small
+          color="dark"
+          href="https://github.com/DavidCouronne/gridsome-starter-blog-vuetify"
+        >
+          <v-icon>mdi-github-circle</v-icon>
+        </v-btn>
+        <v-btn
+          title="Twitter"
+          fab
+          dark
+          small
+          color="blue"
+          href="https://twitter.com/nollan94"
+        >
+          <v-icon>mdi-twitter</v-icon>
+        </v-btn>
+      </v-speed-dial>
+      <!-- Author links -->
+      <v-app-bar-nav-icon
+        title="Toggle Table Of Contents"
+        @click.stop="drawerRight = !drawerRight"
+      />
     </v-app-bar>
     <!-- /navbar -->
 
@@ -110,6 +149,10 @@
       drawerRight: null,
       right: false,
       left: false,
+      activeIndex: 0,
+      currentOffset: 0,
+      internalToc: [],
+      tocTimeout: 0,
     }),
   }
 </script>

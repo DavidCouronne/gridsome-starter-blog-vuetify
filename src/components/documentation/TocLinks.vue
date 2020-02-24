@@ -1,57 +1,45 @@
 <template>
-  <ul
+  <v-navigation-drawer
     id="documentation-toc"
-    class="pt-8 mb-6 documentation-toc"
+    v-model="drawerRight"
+    v-scroll="onScroll"
+    app
+    clipped
+    right
   >
-    <li class="mb-2">
-      <h3 class="body-1 text--primary">
-        Contents
-      </h3>
-    </li>
-    <ul
-      v-if="subtitles.length"
-      class="menu-item submenu"
-    >
-      <li
-        v-for="subtitle in subtitles"
-        :key="subtitle.value"
-        class="submenu__item"
-        :class="'submenu__item-depth-' + subtitle.depth"
-      >
-        <a
-          class="submenu__link"
-          :href="subtitle.anchor"
-          @click.stop.prevent="goTo(`${subtitle.anchor}`)"
-        >
-          {{ subtitle.value }}
-        </a>
+    <ul class="pt-8 mb-6 documentation-toc">
+      <li class="mb-2">
+        <h3 class="body-1 text--primary">
+          Contents
+        </h3>
       </li>
+      <ul
+        v-if="subtitles.length"
+        class="menu-item submenu"
+      >
+        <li
+          v-for="(subtitle,i) in subtitles"
+          :key="subtitle.value"
+          :class="{
+            'documentation-toc__link--subheader': subtitle.depth ===3,
+            'mb-2': i + 1 !== subtitles.length,
+            'primary--text': activeIndex === i,
+            'text--disabled': activeIndex !== i
+          }"
+          :style="{
+            borderColor: activeIndex === i ? 'currentColor' : undefined
+          }"
+          class="documentation-toc__link"
+        >
+          <a
+            class="d-block"
+            :href="subtitle.anchor"
+            @click.stop.prevent="goTo(`${subtitle.anchor}`)"
+          >{{ subtitle.value }}</a>
+        </li>
+      </ul>
     </ul>
-
-    <!-- <template v-for="(item, i) in internalToc">
-          <li
-            v-if="item.visible"
-            :key="i"
-            :class="{
-              'documentation-toc__link--subheader': item.subheader,
-              'mb-2': i + 1 !== internalToc.length,
-              'primary--text': activeIndex === i,
-              'text--disabled': activeIndex !== i
-            }"
-            :style="{
-              borderColor: activeIndex === i ? 'currentColor' : undefined
-            }"
-            class="documentation-toc__link"
-          >
-            <a
-              :href="`#${item.id}`"
-              class="d-block"
-              @click.stop.prevent="goTo(`#${item.id}`)"
-              v-html="item.text"
-            />
-          </li>
-    </template>-->
-  </ul>
+  </v-navigation-drawer>
 </template>
 
 <script>
@@ -62,7 +50,15 @@
       subtitles: { type: Array, default: () => [] },
       links: { type: Array, default: () => [] },
       path: { type: String, default: () => '/docs/' },
+      drawerRight: { type: Boolean, default: false },
     },
+    data: () => ({
+      activeIndex: 0,
+      currentOffset: 0,
+      internalToc: [],
+      tocTimeout: 0,
+    }),
+    computed: {},
     methods: {
       goTo (id) {
         this.$vuetify.goTo(id).then(() => {
@@ -74,6 +70,34 @@
             document.location.hash = id
           }
         })
+      },
+      findActiveIndex () {
+        if (this.currentOffset < 100) {
+          this.activeIndex = 0
+
+          return
+        }
+
+        const list = this.subtitles.slice().reverse()
+        const index = list.findIndex(item => {
+          const section = document.getElementById(item.anchor.replace('#', ''))
+
+          if (!section) return false
+
+          return section.offsetTop - 100 < this.currentOffset
+        })
+
+        const lastIndex = list.length - 1
+
+        this.activeIndex = index > -1 ? lastIndex - index : lastIndex
+      },
+      onScroll () {
+        this.currentOffset =
+          window.pageYOffset || document.documentElement.offsetTop || 0
+
+        clearTimeout(this.timeout)
+
+        this.timeout = setTimeout(this.findActiveIndex, 50)
       },
     },
   }
