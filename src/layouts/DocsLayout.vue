@@ -1,15 +1,12 @@
 <template>
   <v-app id="inspire">
     <!-- Right Drawer -->
-    <v-navigation-drawer
-      v-model="drawerRight"
-      app
-      clipped
-      right
-      class="text-center"
-    >
-      <documentation-toc-links :subtitles="subtitles" />
-    </v-navigation-drawer>
+
+    <documentation-toc-links
+      :subtitles="subtitles"
+      :drawer-right="drawerRight"
+    />
+
     <!-- /Right Drawer -->
 
     <!-- navbar -->
@@ -18,10 +15,10 @@
       clipped-right
       clipped-left
       dark
-      class="yellow darken-2 text-center"
+      class="text-center"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Toolbar</v-toolbar-title>
+      <v-toolbar-title>Gridsome Starter Blog Vuetify</v-toolbar-title>
       <v-btn
         dark
         icon
@@ -36,7 +33,7 @@
         icon
         router
         exact
-        :to="$url('/docs')"
+        :to="$url('/docs/installation')"
         title="Docs"
       >
         <v-icon>mdi-book-open-page-variant</v-icon>
@@ -110,6 +107,10 @@
       drawerRight: null,
       right: false,
       left: false,
+      activeIndex: 0,
+      currentOffset: 0,
+      internalToc: [],
+      tocTimeout: 0,
     }),
   }
 </script>

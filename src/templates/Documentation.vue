@@ -1,9 +1,5 @@
 <template>
   <DocsLayout :subtitles="subtitles">
-    <h1>{{ $page.documentation.title }}</h1>
-    <p class="intro">
-      {{ $page.documentation.description }}
-    </p>
     <div class="rich-text">
       <VueRemarkContent />
     </div>
