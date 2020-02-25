@@ -5,6 +5,8 @@
 import Vuetify from 'vuetify'
 import { vuetifyConfig } from './vuetify.config.js'
 
+import './plugins'
+
 // Custom Styles
 import './assets/style/index.scss'
 
@@ -14,17 +16,12 @@ import BlogLayout from '~/layouts/Blog.vue'
 import TagLayout from '~/layouts/Tag.vue'
 import DocsLayout from '~/layouts/DocsLayout.vue'
 
-// Base Components
-import BaseThemeToggle from '@/components/base/ThemeToggle.vue'
-import BaseItem from '@/components/base/Item.vue'
-import BaseGroup from '@/components/base/Group.vue'
-
 export default function (Vue, { head, appOptions }) {
   // Headers
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-  })
+  // head.link.push({
+  //   rel: 'stylesheet',
+  //   href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+  // })
 
   // Vuetify
   const vuetifyOpts = vuetifyConfig()
@@ -36,9 +33,4 @@ export default function (Vue, { head, appOptions }) {
   Vue.component('BlogLayout', BlogLayout)
   Vue.component('TagLayout', TagLayout)
   Vue.component('DocsLayout', DocsLayout)
-
-  // Set base components
-  Vue.component('BaseThemeToggle', BaseThemeToggle)
-  Vue.component('BaseItem', BaseItem)
-  Vue.component('BaseGroup', BaseGroup)
 }
