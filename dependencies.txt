@@ -1,1 +1,0 @@
-@gridsome/plugin-sitemap @gridsome/source-filesystem @gridsome/transformer-remark @mdi/font gridsome gridsome-plugin-remark-prismjs-all vuetify

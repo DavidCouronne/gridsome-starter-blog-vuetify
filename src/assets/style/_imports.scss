@@ -1,11 +1,9 @@
-@tailwind base;
 
-@tailwind components;
-
-@tailwind utilities;
 
 @import './vuetify.css';
 @import '~@mdi/font/css/materialdesignicons.css';
 
 @import '~gridsome-plugin-remark-container/themes/default.css';
 @import "~gridsome-plugin-remark-prismjs-all/themes/night-owl.css";
+
+@import './rich-text.css';
