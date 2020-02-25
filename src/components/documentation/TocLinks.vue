@@ -50,7 +50,7 @@
       subtitles: { type: Array, default: () => [] },
       links: { type: Array, default: () => [] },
       path: { type: String, default: () => '/docs/' },
-      drawerRight: { type: Boolean, default: false },
+      drawerRight: { type: Boolean, default: null },
     },
     data: () => ({
       activeIndex: 0,

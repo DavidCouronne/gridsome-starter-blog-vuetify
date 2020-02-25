@@ -3,8 +3,8 @@
     <!-- Right Drawer -->
 
     <documentation-toc-links
-      :subtitles="subtitles"
       :drawer-right="drawerRight"
+      :subtitles="subtitles"
     />
 
     <!-- /Right Drawer -->
@@ -111,13 +111,21 @@
 
     <!-- Main content -->
     <v-content>
-      <v-container
-        id="container"
-        class="fill-height"
-        fluid
+      <v-responsive
+        class="mx-auto overflow-visible"
+        max-width="1024"
       >
-        <slot />
-      </v-container>
+        <v-container
+          id="container"
+        >
+          <v-responsive
+            class="overflow-visible"
+            min-height="90vh"
+          >
+            <slot />
+          </v-responsive>
+        </v-container>
+      </v-responsive>
     </v-content>
     <!-- /Main content -->
 
