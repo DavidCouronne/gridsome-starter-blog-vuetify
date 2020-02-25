@@ -2,8 +2,7 @@ module.exports = {
   root: true,
   env: {
     node: true,
-  },
-  plugins: ['gridsome','vuetify'],
+  },  
   'extends': 'vuetify', 
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
